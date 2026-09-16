@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2b">
+  <meta name="description" content="Saptarshi Mandal — final-year CST student at IEM Kolkata. Projects in data analytics, machine learning and software systems.">
+  <title>Saptarshi Mandal | Data &amp; Software Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<canvas id="matrixCanvas" class="matrix-canvas" aria-hidden="true"></canvas>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav id="mainNav" aria-label="Main navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" id="brandLink" href="#top">
+      <span class="monogram">SM<span>.</span></span>
+      <span>Saptarshi Mandal</span>
+    </a>
+    <div class="nav-actions">
+      <button id="effectsToggle" class="effects-toggle" type="button" aria-pressed="false" hidden>Effects off</button>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle dark/light mode">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" hidden>Menu <span aria-hidden="true">☰</span></button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#selenium-lab">Selenium Lab</a></li>
+      <li><a class="nav-contact" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div data-reveal>
+      <div class="eyebrow">[ PORTFOLIO / SAPTARSHI MANDAL ]</div>
+      <h1>Curious about data.<br>Driven to <em>build.</em></h1>
+      <p class="hero-intro">I’m Saptarshi, a final-year CST student at IEM Kolkata. I use Python, SQL and business intelligence to turn data into decisions, and build software around practical problems.</p>
+      <p class="hero-role">DATA ANALYST / BUSINESS ANALYST / SOFTWARE</p>
+      <div class="actions">
+        <a id="viewProjectsBtn" class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+        <a id="downloadResume" class="text-link" href="Saptarshi_Mandal_DataAnalyst_Resume.pdf" download>Download resume (PDF) <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <aside class="focus-panel" aria-label="Areas of focus" data-reveal>
+      <div class="panel-label">&gt; human.skills <span aria-hidden="true">_</span></div>
+      <div class="focus-row">
+        <span>01</span>
+        <div>
+          <h2>Analyze.</h2>
+          <p>Find the story in the data.</p>
+        </div>
+      </div>
+      <div class="focus-row">
+        <span>02</span>
+        <div>
+          <h2>Explain.</h2>
+          <p>Make insights useful and clear.</p>
+        </div>
+      </div>
+      <div class="focus-row">
+        <span>03</span>
+        <div>
+          <h2>Build.</h2>
+          <p>Connect ideas to working systems.</p>
+        </div>
+      </div>
+      <div class="panel-bottom">DATA · CODE · PRACTICAL PROBLEMS</div>
+    </aside>
+  </div>
+  <div class="wrap hero-bottom">
+    <span>Python / SQL / Machine Learning</span>
+    <a href="#projects">Scroll to explore ↓</a>
+  </div>
+</header>
+
+<main id="main">
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div>
+          <div class="eyebrow" data-scramble="01 / SELECTED WORK">01 / SELECTED WORK</div>
+          <h2>Ideas put into practice.</h2>
+        </div>
+        <p>From people analytics to connected systems — a selection of my academic projects.</p>
+      </div>
+
+      <p id="filterStatus" class="filter-status" role="status" aria-live="polite">Showing all 6 projects</p>
+      <div class="project-filters" role="group" aria-label="Filter projects by category" data-reveal>
+        <span class="filter-label">Filter projects:</span>
+        <div class="filter-btn-group">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="data-ml" aria-pressed="false">Data &amp; ML</button>
+          <button type="button" class="filter-btn" data-filter="software-iot" aria-pressed="false">Software &amp; IoT</button>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project-card featured-project" id="project_101" data-category="data-ml" data-reveal>
+          <div class="project-meta"><span>FEATURED · DATA ANALYTICS</span><span>01 /</span></div>
+          <h3>HR Employee Attrition Analysis</h3><p class="project-lead">From employee patterns to workforce decisions.</p><p class="muted">Analyzed 1,470 IBM HR records to identify attrition drivers and score employee risk. A logistic regression model achieved 77.7% accuracy and 0.81 ROC-AUC on held-out test data, with risk-scored exports and a Power BI dashboard build guide.</p>
+          <dl class="project-highlights"><div><dt>employee records</dt><dd>1,470</dd></div><div><dt>test ROC-AUC</dt><dd>0.81</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Power BI (DAX)</span><span class="tag">Scikit-learn</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_101" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/-HR-attrition-analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_202" data-category="data-ml" data-reveal>
+          <div class="project-meta"><span>MACHINE LEARNING</span><span>02 /</span></div>
+          <h3>Loan Default &amp; Credit Risk Analysis</h3><p class="project-lead">Making risk easier to understand.</p><p class="muted">Analyzed 32,000+ loan applications using Logistic Regression, Random Forest and XGBoost. Achieved 80.6% accuracy and 0.876 ROC-AUC, with SHAP insights in an interactive Tableau dashboard.</p>
+          <dl class="project-highlights"><div><dt>loan applications</dt><dd>32k+</dd></div><div><dt>ROC-AUC</dt><dd>0.876</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Tableau</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_202" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Loan-Default-Credit-Risk-Analysis-" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_303" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>SOFTWARE &amp; SECURITY</span><span>03 /</span></div>
+          <h3>MediVault</h3><p class="project-lead">Decentralized medical records.</p><p class="muted">Designed an Ethereum-based medical records system with IPFS storage for tamper-resistant access. Authored an accompanying research paper with a WannaCry-based case study.</p>
+          <dl class="project-highlights"><div><dt>access framework</dt><dd>Ethereum</dd></div><div><dt>record storage</dt><dd>IPFS</dd></div></dl>
+          <div class="tag-list"><span class="tag">Ethereum</span><span class="tag">IPFS</span><span class="tag">Blockchain</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_303" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/MediVault-Decentralized-Medical-Records-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_404" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>CONNECTED SYSTEMS</span><span>04 /</span></div>
+          <h3>Automated Irrigation System</h3><p class="project-lead">Sensor data that drives action.</p><p class="muted">Built a sensor-driven pipeline monitoring real-time soil moisture to automate water distribution, reducing manual intervention by 40%.</p>
+          <dl class="project-highlights"><div><dt>soil monitoring</dt><dd>Real-time</dd></div><div><dt>less manual intervention</dt><dd>40%</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Arduino / Raspberry Pi</span><span class="tag">Sensors</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_404" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Automated-Irrigation-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_505" data-category="data-ml" data-reveal>
+          <div class="project-meta"><span>DATA ANALYTICS</span><span>05 /</span></div>
+          <h3>Customer Churn Analysis</h3><p class="project-lead">From churn patterns to retention actions.</p><p class="muted">Analyzed approximately 7,043 Telco customer records in MySQL Workbench and built a Power BI dashboard with a prescriptive recommendation engine for targeted retention actions.</p>
+          <dl class="project-highlights"><div><dt>customer records</dt><dd>7,043</dd></div><div><dt>retention analysis</dt><dd>SQL + BI</dd></div></dl>
+          <div class="tag-list"><span class="tag">SQL</span><span class="tag">MySQL Workbench</span><span class="tag">Power BI</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_505" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Customer-Churn-Analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_606" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>SOFTWARE &amp; AI</span><span>06 /</span></div>
+          <h3>MediAssist AI</h3><p class="project-lead">A healthcare assistant built at a hackathon.</p><p class="muted">Built a healthcare assistant with four consultation modes, Gemini API-driven interactions and a MongoDB / Node.js backend, complete with deployment artifacts.</p>
+          <dl class="project-highlights"><div><dt>consultation modes</dt><dd>4</dd></div><div><dt>AI integration</dt><dd>Gemini</dd></div></dl>
+          <div class="tag-list"><span class="tag">Gemini API</span><span class="tag">MongoDB</span><span class="tag">Node.js / Express</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_606" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234" target="_blank" rel="noopener noreferrer">Explore GitHub profile <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div data-reveal>
+        <div class="eyebrow" data-scramble="02 / A LITTLE ABOUT ME">02 / A LITTLE ABOUT ME</div>
+        <h2>A technical foundation.<br>A practical perspective.</h2>
+      </div>
+      <div class="about-copy" data-reveal>
+        <p>I’m a final-year Computer Science &amp; Technology student at the Institute of Engineering and Management, Kolkata, interested in data, software, and the problems they can solve together.</p>
+        <p class="muted">My work brings together Python, SQL, visualization and machine learning. I enjoy moving from an open-ended question to a structured analysis, then communicating what the results mean.</p>
+        <p class="muted"><strong>Research &amp; Content Intern · CollegeTips.in</strong><br>June–July 2024 · Kharagpur<br>Synthesized educational trend research into structured written deliverables and met editorial deadlines throughout the internship.</p>
+        <div class="about-facts">
+          <div>
+            <span>EDUCATION</span>
+            <strong>IEM, Kolkata</strong>
+            <p>B.Tech, CST · 2023–2027</p><p>CGPA: 8.4 through Semester V</p>
+          </div>
+          <div>
+            <span>ROLE INTERESTS</span>
+            <strong>Data &amp; software</strong>
+            <p>Analytics · Business insights · Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div>
+          <div class="eyebrow" data-scramble="03 / TOOLKIT">03 / TOOLKIT</div>
+          <h2>What I work with.</h2>
+        </div>
+        <p>A toolkit for exploring data, communicating findings, and developing intelligent systems.</p>
+      </div>
+      <div class="grid" id="skillsGrid">
+        <div class="card skill-card" data-reveal>
+          <span class="skill-number">01 /</span>
+          <h3>Data Analysis</h3>
+          <p class="muted">From raw records to a clearer picture.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SQL</span>
+            <span class="tag">EDA</span>
+          </div>
+        </div>
+        <div class="card skill-card" data-reveal>
+          <span class="skill-number">02 /</span>
+          <h3>Visualization</h3>
+          <p class="muted">Insights people can understand and use.</p>
+          <div class="tag-list">
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+        <div class="card skill-card" data-reveal>
+          <span class="skill-number">03 /</span>
+          <h3>Machine Learning</h3>
+          <p class="muted">Patterns, predictions, and interpretation.</p>
+          <div class="tag-list">
+            <span class="tag">Logistic Regression</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">XGBoost</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="selenium-lab">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>Selenium Practice Lab</h2>
+        <p>A small, interactive workspace for practicing browser automation. Demo only: nothing is sent or stored. Use sample details.</p>
+      </div>
+      <div class="selenium-box">
+        <div class="terminal-bar" aria-hidden="true">
+          <div class="terminal-dots">
+            <span class="term-dot term-dot-red"></span>
+            <span class="term-dot term-dot-yellow"></span>
+            <span class="term-dot term-dot-green"></span>
+          </div>
+          <span class="terminal-title">saptarshi:~/selenium-lab$</span>
+          <span class="terminal-status">[TERMINAL READY]</span>
+        </div>
+        <form id="practiceForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="username">Username</label>
+              <input id="username" name="username" type="text" placeholder="Enter username">
+            </div>
+            <div class="field">
+              <label for="passwordField">Password</label>
+              <input id="passwordField" name="password" type="password" placeholder="Enter password">
+            </div>
+            <div class="field">
+              <label for="user_email_786">Email</label>
+              <input id="user_email_786" name="email" type="email" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="roleSelect">Preferred Role</label>
+              <select id="roleSelect" name="role">
+                <option value="data-analyst">Data Analyst</option>
+                <option value="business-analyst">Business Analyst</option>
+                <option value="software">Software Developer</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="messageBox">Message</label>
+              <textarea id="messageBox" name="message" placeholder="Type a short message"></textarea>
+            </div>
+            <div class="field full">
+              <label class="checkbox-row"><input id="agreeTerms" name="agree" type="checkbox"> I agree to the demo terms</label>
+            </div>
+          </div>
+
+          <div class="control-row" id="buttonArea">
+            <button id="submitDemo" class="btn btn-primary action-button" type="submit">Submit Demo</button>
+            <button id="clearDemo" class="btn action-button" type="reset">Clear Form</button>
+            <button id="showCount" class="btn action-button" type="button">Count Project Cards</button>
+          </div>
+        </form>
+
+        <div class="link-list" id="practiceLinks">
+          <a class="demo-link" href="#about">About Section</a>
+          <a class="demo-link" href="#skills">Skills Section</a>
+          <a class="demo-link" href="#projects">Projects Section</a>
+        </div>
+
+        <div id="labOutput" role="status" aria-live="polite">Selenium interaction output will appear here.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div data-reveal>
+        <div class="eyebrow" data-scramble="05 / WHAT’S NEXT?">05 / WHAT’S NEXT?</div>
+        <h2>Let’s make<br>something <em>useful.</em></h2>
+        <p>Have an opportunity in data or software?<br>I’d love to hear about it.</p>
+        <div class="email-actions"><button id="copyEmail" class="btn" type="button" hidden>Copy email address</button><span id="copyStatus" role="status" aria-live="polite"></span></div>
+        <a class="email-link contact-link" href="mailto:saptarshi2005.kgp@gmail.com">saptarshi2005.kgp@gmail.com ↗</a>
+      </div>
+      <div class="contact-links" data-reveal>
+        <a class="contact-link" href="https://www.linkedin.com/in/saptarshi-mandal-cs" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        <a class="contact-link" href="https://github.com/Saptarshi-Mandal-1234" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+        <a href="#top">Back to top <span>↑</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="projectDialog" class="project-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+  <div class="dialog-card">
+    <div class="dialog-header">
+      <span class="dialog-meta" id="dialogCategory">DATA ANALYTICS</span>
+      <button type="button" id="dialogCloseBtn" class="dialog-close-btn" aria-label="Close project details">✕</button>
+    </div>
+    <h2 id="dialogTitle" class="dialog-title">Project Title</h2>
+    <p id="dialogLead" class="dialog-lead">Project lead summary</p>
+    <p id="dialogDesc" class="dialog-desc">Project factual description</p>
+    <div class="dialog-tags-container">
+      <span class="dialog-tags-label">Technologies &amp; Skills:</span>
+      <div id="dialogTags" class="tag-list"></div>
+    </div>
+    <div class="dialog-footer">
+      <a id="dialogLink" class="btn btn-primary" href="https://github.com/Saptarshi-Mandal-1234" target="_blank" rel="noopener noreferrer">Explore GitHub profile <span aria-hidden="true">↗</span></a>
+      <button type="button" id="dialogCloseFooterBtn" class="btn btn-outline">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Saptarshi Mandal</span>
+    <span>Built with curiosity. And a little code.</span>
+  </div>
+</footer>
+</body>
+</html>
