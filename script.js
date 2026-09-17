@@ -192,6 +192,7 @@ filterButtons.forEach((btn) => {
    5. Accessible Project Detail Dialog (Factual Content Only)
    ========================================================================== */
 const projectData = {
+  "project_707": {"category": "SOFTWARE & AI", "title": "AI HR Workspace", "lead": "From HR questions to structured action plans.", "desc": "A Gemini-powered HR workspace with eight specialty modes, a Node.js backend, and a browser interface. Supports drafting and structured HR workflows. This is a local prototype; AI output needs human review and production authentication, storage and privacy work remain.", "tags": ["Node.js", "JavaScript", "Gemini API"], "link": "case-studies/ai-hr.html", "linkLabel": "Read project overview"},
   "project_101": {
     "category": "DATA ANALYTICS",
     "title": "HR Employee Attrition Analysis",
