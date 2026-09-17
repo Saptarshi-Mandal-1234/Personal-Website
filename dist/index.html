@@ -28,8 +28,8 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#certifications">Certificates</a></li>
       <li><a class="nav-contact" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a></li>
     </ul>
@@ -77,93 +77,15 @@
   </div>
   <div class="wrap hero-bottom">
     <span>Python / SQL / Machine Learning</span>
-    <a href="#projects">Scroll to explore ↓</a>
+    <a href="#about">Scroll to explore ↓</a>
   </div>
 </header>
 
 <main id="main">
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div>
-          <div class="eyebrow" data-scramble="01 / SELECTED WORK">01 / SELECTED WORK</div>
-          <h2>Ideas put into practice.</h2>
-        </div>
-        <p>From people analytics to connected systems — a selection of my academic projects.</p>
-      </div>
-
-      <p id="filterStatus" class="filter-status" role="status" aria-live="polite">Showing all 6 projects</p>
-      <div class="project-filters" role="group" aria-label="Filter projects by category" data-reveal>
-        <span class="filter-label">Filter projects:</span>
-        <div class="filter-btn-group">
-          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter-btn" data-filter="data-ml" aria-pressed="false">Data &amp; ML</button>
-          <button type="button" class="filter-btn" data-filter="software-iot" aria-pressed="false">Software &amp; IoT</button>
-        </div>
-      </div>
-
-      <div class="project-grid">
-        <article class="card project-card featured-project" id="project_101" data-category="data-ml" data-reveal>
-          <div class="project-meta"><span>FEATURED · DATA ANALYTICS</span><span>01 /</span></div>
-          <h3>HR Employee Attrition Analysis</h3><p class="project-lead">From employee patterns to workforce decisions.</p><p class="muted">Analyzed 1,470 IBM HR records to identify attrition drivers and score employee risk. A logistic regression model achieved 77.7% accuracy and 0.81 ROC-AUC on held-out test data, with risk-scored exports and a Power BI dashboard build guide.</p>
-          <dl class="project-highlights"><div><dt>employee records</dt><dd>1,470</dd></div><div><dt>test ROC-AUC</dt><dd>0.81</dd></div></dl>
-          <div class="tag-list"><span class="tag">Python</span><span class="tag">Power BI (DAX)</span><span class="tag">Scikit-learn</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_101" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/-HR-attrition-analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
-        </article>
-
-        <article class="card project-card" id="project_202" data-category="data-ml" data-reveal>
-          <div class="project-meta"><span>MACHINE LEARNING</span><span>02 /</span></div>
-          <h3>Loan Default &amp; Credit Risk Analysis</h3><p class="project-lead">Making risk easier to understand.</p><p class="muted">Analyzed 32,000+ loan applications using Logistic Regression, Random Forest and XGBoost. Achieved 80.6% accuracy and 0.876 ROC-AUC, with SHAP insights in an interactive Tableau dashboard.</p>
-          <dl class="project-highlights"><div><dt>loan applications</dt><dd>32k+</dd></div><div><dt>ROC-AUC</dt><dd>0.876</dd></div></dl>
-          <div class="tag-list"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">Tableau</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_202" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Loan-Default-Credit-Risk-Analysis-" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
-        </article>
-
-        <article class="card project-card" id="project_303" data-category="software-iot" data-reveal>
-          <div class="project-meta"><span>SOFTWARE &amp; SECURITY</span><span>03 /</span></div>
-          <h3>MediVault</h3><p class="project-lead">Decentralized medical records.</p><p class="muted">Designed an Ethereum-based medical records system with IPFS storage for tamper-resistant access. Authored an accompanying research paper with a WannaCry-based case study.</p>
-          <dl class="project-highlights"><div><dt>access framework</dt><dd>Ethereum</dd></div><div><dt>record storage</dt><dd>IPFS</dd></div></dl>
-          <div class="tag-list"><span class="tag">Ethereum</span><span class="tag">IPFS</span><span class="tag">Blockchain</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_303" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/MediVault-Decentralized-Medical-Records-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
-        </article>
-
-        <article class="card project-card" id="project_404" data-category="software-iot" data-reveal>
-          <div class="project-meta"><span>CONNECTED SYSTEMS</span><span>04 /</span></div>
-          <h3>Automated Irrigation System</h3><p class="project-lead">Sensor data that drives action.</p><p class="muted">Built a sensor-driven pipeline monitoring real-time soil moisture to automate water distribution, reducing manual intervention by 40%.</p>
-          <dl class="project-highlights"><div><dt>soil monitoring</dt><dd>Real-time</dd></div><div><dt>less manual intervention</dt><dd>40%</dd></div></dl>
-          <div class="tag-list"><span class="tag">Python</span><span class="tag">Arduino / Raspberry Pi</span><span class="tag">Sensors</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_404" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Automated-Irrigation-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
-        </article>
-
-        <article class="card project-card" id="project_505" data-category="data-ml" data-reveal>
-          <div class="project-meta"><span>DATA ANALYTICS</span><span>05 /</span></div>
-          <h3>Customer Churn Analysis</h3><p class="project-lead">From churn patterns to retention actions.</p><p class="muted">Analyzed approximately 7,043 Telco customer records in MySQL Workbench and built a Power BI dashboard with a prescriptive recommendation engine for targeted retention actions.</p>
-          <dl class="project-highlights"><div><dt>customer records</dt><dd>7,043</dd></div><div><dt>retention analysis</dt><dd>SQL + BI</dd></div></dl>
-          <div class="tag-list"><span class="tag">SQL</span><span class="tag">MySQL Workbench</span><span class="tag">Power BI</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_505" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Customer-Churn-Analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
-        </article>
-
-        <article class="card project-card" id="project_606" data-category="software-iot" data-reveal>
-          <div class="project-meta"><span>SOFTWARE &amp; AI</span><span>06 /</span></div>
-          <h3>MediAssist AI</h3><p class="project-lead">A healthcare assistant built at a hackathon.</p><p class="muted">Built a healthcare assistant with four consultation modes, Gemini API-driven interactions and a MongoDB / Node.js backend, complete with deployment artifacts.</p>
-          <dl class="project-highlights"><div><dt>consultation modes</dt><dd>4</dd></div><div><dt>AI integration</dt><dd>Gemini</dd></div></dl>
-          <div class="tag-list"><span class="tag">Gemini API</span><span class="tag">MongoDB</span><span class="tag">Node.js / Express</span></div>
-          <div class="card-actions"><button type="button" class="btn-details" data-project="project_606" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
-          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234" target="_blank" rel="noopener noreferrer">Explore GitHub profile <span aria-hidden="true">↗</span></a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section id="about">
     <div class="wrap about-grid">
       <div data-reveal>
-        <div class="eyebrow" data-scramble="02 / A LITTLE ABOUT ME">02 / A LITTLE ABOUT ME</div>
+        <div class="eyebrow" data-scramble="01 / A LITTLE ABOUT ME">01 / A LITTLE ABOUT ME</div>
         <h2>An analytical mind.<br>A creative streak.</h2>
         <figure class="about-portrait"><img src="assets/saptarshi-portrait.png" alt="Saptarshi Mandal wearing a blazer" width="1106" height="1422" loading="lazy" decoding="async"><figcaption><span>SAPTARSHI MANDAL</span><span>Data · Code · Creative thinking</span></figcaption></figure>
       </div>
@@ -189,6 +111,84 @@
     </div>
   </section>
 
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div>
+          <div class="eyebrow" data-scramble="02 / SELECTED WORK">02 / SELECTED WORK</div>
+          <h2>Ideas put into practice.</h2>
+        </div>
+        <p>From people analytics to connected systems — a selection of my academic projects.</p>
+      </div>
+
+      <p id="filterStatus" class="filter-status" role="status" aria-live="polite">Showing all 6 projects</p>
+      <div class="project-filters" role="group" aria-label="Filter projects by category" data-reveal>
+        <span class="filter-label">Filter projects:</span>
+        <div class="filter-btn-group">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="data-ml" aria-pressed="false">Data &amp; ML</button>
+          <button type="button" class="filter-btn" data-filter="software-iot" aria-pressed="false">Software &amp; IoT</button>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project-card featured-project" id="project_101" data-category="data-ml" data-reveal>
+          <a class="project-preview" href="case-studies/hr-attrition.html"><img loading="lazy" src="assets/projects/hr-dashboard.png" alt="HR Employee Attrition Analysis project output"></a><div class="project-meta"><span>FEATURED · DATA ANALYTICS</span><span>01 /</span></div>
+          <h3>HR Employee Attrition Analysis</h3><p class="project-lead">From employee patterns to workforce decisions.</p><p class="muted">Analyzed 1,470 IBM HR records to identify attrition drivers and score employee risk. A logistic regression model achieved 77.7% accuracy and 0.81 ROC-AUC on held-out test data, with risk-scored exports and a Power BI dashboard build guide.</p>
+          <dl class="project-highlights"><div><dt>employee records</dt><dd>1,470</dd></div><div><dt>test ROC-AUC</dt><dd>0.81</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Power BI (DAX)</span><span class="tag">Scikit-learn</span></div>
+          <div class="card-actions"><a class="btn-details" href="case-studies/hr-attrition.html">Read case study →</a><button type="button" class="btn-details" data-project="project_101" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/-HR-attrition-analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_202" data-category="data-ml" data-reveal>
+          <a class="project-preview" href="case-studies/credit-risk.html"><img loading="lazy" src="assets/projects/credit-dashboard.png" alt="Loan Default &amp; Credit Risk Analysis project output"></a><div class="project-meta"><span>MACHINE LEARNING</span><span>02 /</span></div>
+          <h3>Loan Default &amp; Credit Risk Analysis</h3><p class="project-lead">Making risk easier to understand.</p><p class="muted">Analyzed 32,000+ loan applications using Logistic Regression, Random Forest and Gradient Boosting. Achieved 80.6% accuracy and 0.876 ROC-AUC, with model comparisons and a Tableau dashboard.</p>
+          <dl class="project-highlights"><div><dt>loan applications</dt><dd>32k+</dd></div><div><dt>ROC-AUC</dt><dd>0.876</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Logistic Regression</span><span class="tag">Tableau</span></div>
+          <div class="card-actions"><a class="btn-details" href="case-studies/credit-risk.html">Read case study →</a><button type="button" class="btn-details" data-project="project_202" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Loan-Default-Credit-Risk-Analysis-" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_303" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>SOFTWARE &amp; SECURITY</span><span>03 /</span></div>
+          <h3>MediVault</h3><p class="project-lead">Decentralized medical records.</p><p class="muted">Designed an Ethereum-based medical records system with IPFS storage for tamper-resistant access. Authored an accompanying research paper with a WannaCry-based case study.</p>
+          <dl class="project-highlights"><div><dt>access framework</dt><dd>Ethereum</dd></div><div><dt>record storage</dt><dd>IPFS</dd></div></dl>
+          <div class="tag-list"><span class="tag">Ethereum</span><span class="tag">IPFS</span><span class="tag">Blockchain</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_303" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/MediVault-Decentralized-Medical-Records-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_404" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>CONNECTED SYSTEMS</span><span>04 /</span></div>
+          <h3>Automated Irrigation System</h3><p class="project-lead">Sensor data that drives action.</p><p class="muted">Built a sensor-driven pipeline monitoring real-time soil moisture to automate water distribution, reducing manual intervention by 40%.</p>
+          <dl class="project-highlights"><div><dt>soil monitoring</dt><dd>Real-time</dd></div><div><dt>less manual intervention</dt><dd>40%</dd></div></dl>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Arduino / Raspberry Pi</span><span class="tag">Sensors</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_404" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Automated-Irrigation-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_505" data-category="data-ml" data-reveal>
+          <a class="project-preview" href="case-studies/customer-churn.html"><img loading="lazy" src="assets/projects/churn-contracts.svg" alt="Customer Churn Analysis project output"></a><div class="project-meta"><span>DATA ANALYTICS</span><span>05 /</span></div>
+          <h3>Customer Churn Analysis</h3><p class="project-lead">From churn patterns to retention actions.</p><p class="muted">Analyzed approximately 7,043 Telco customer records in MySQL Workbench and built a Power BI dashboard with a prescriptive recommendation engine for targeted retention actions.</p>
+          <dl class="project-highlights"><div><dt>customer records</dt><dd>7,043</dd></div><div><dt>retention analysis</dt><dd>SQL + BI</dd></div></dl>
+          <div class="tag-list"><span class="tag">SQL</span><span class="tag">MySQL Workbench</span><span class="tag">Power BI</span></div>
+          <div class="card-actions"><a class="btn-details" href="case-studies/customer-churn.html">Read case study →</a><button type="button" class="btn-details" data-project="project_505" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/Customer-Churn-Analysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="card project-card" id="project_606" data-category="software-iot" data-reveal>
+          <div class="project-meta"><span>SOFTWARE &amp; AI</span><span>06 /</span></div>
+          <h3>MediAssist AI</h3><p class="project-lead">A healthcare assistant built at a hackathon.</p><p class="muted">Built a healthcare assistant with four consultation modes, Gemini API-driven interactions and a MongoDB / Node.js backend, complete with deployment artifacts.</p>
+          <dl class="project-highlights"><div><dt>consultation modes</dt><dd>4</dd></div><div><dt>AI integration</dt><dd>Gemini</dd></div></dl>
+          <div class="tag-list"><span class="tag">Gemini API</span><span class="tag">MongoDB</span><span class="tag">Node.js / Express</span></div>
+          <div class="card-actions"><button type="button" class="btn-details" data-project="project_606" aria-haspopup="dialog">Explore project <span aria-hidden="true">→</span></button></div>
+          <div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234" target="_blank" rel="noopener noreferrer">Explore GitHub profile <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="skills">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -196,9 +196,245 @@
           <div class="eyebrow" data-scramble="03 / TOOLKIT">03 / TOOLKIT</div>
           <h2>What I work with.</h2>
         </div>
-        <p>Skills from my projects, resume and continued learning. Explore by role, then open the evidence behind each area.</p>
+        <p>Skills from my projects, resume and continued learning. Explore by role, then open a supporting certificate to inspect the course record.</p>
       </div>
-      <div id="skillControls" class="skill-controls" role="group" aria-label="Explore skills by role" hidden><button class="skill-filter" type="button" data-skill-filter="all" aria-pressed="true">All skills</button><button class="skill-filter" type="button" data-skill-filter="data" aria-pressed="false">Data analyst</button><button class="skill-filter" type="button" data-skill-filter="software" aria-pressed="false">Software &amp; cloud</button><button class="skill-filter" type="button" data-skill-filter="business" aria-pressed="false">Business &amp; communication</button></div><p id="skillStatus" class="muted" role="status" aria-live="polite">8 skill areas · Expand a card to explore the evidence.</p><div class="grid" id="skillsGrid"><article class="card skill-card" data-skill-roles="data business"><span class="skill-number">01 /</span><h3>Data analysis &amp; SQL</h3><p class="muted">Clean, query and explore data before drawing conclusions.</p><div class="tag-list"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SQL joins</span><span class="tag">CTEs</span><span class="tag">Window functions</span><span class="tag">EDA</span><span class="tag">Data cleaning</span><span class="tag">Statistical analysis</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume: data and analytics toolkit; HR attrition and customer churn projects.</p><a href="certificates/certificate-20.pdf" target="_blank" rel="noopener">Introduction to SQL ↗</a></details></article><article class="card skill-card" data-skill-roles="data business"><span class="skill-number">02 /</span><h3>Dashboards &amp; business intelligence</h3><p class="muted">Turn analysis into decisions people can see and use.</p><div class="tag-list"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Tableau</span><span class="tag">Excel</span><span class="tag">Pivot tables</span><span class="tag">VLOOKUP</span><span class="tag">KPI reporting</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume: Power BI and Tableau projects; PwC Power BI and JPMorgan Excel simulations.</p><a href="certificates/certificate-16.pdf" target="_blank" rel="noopener">Power BI job simulation ↗</a></details></article><article class="card skill-card" data-skill-roles="data software"><span class="skill-number">03 /</span><h3>Machine learning &amp; AI</h3><p class="muted">Explore predictive models and explain what drives their results.</p><div class="tag-list"><span class="tag">Scikit-learn</span><span class="tag">Logistic regression</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">K-Means</span><span class="tag">Generative AI</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume: loan risk and HR projects. Certificates: IBM Data Analytics with AI and Tata GenAI analytics.</p><a href="certificates/certificate-18.pdf" target="_blank" rel="noopener">Data Analytics with AI ↗</a></details></article><article class="card skill-card" data-skill-roles="data business"><span class="skill-number">04 /</span><h3>Business analysis</h3><p class="muted">Connect a business question to requirements, measures and recommendations.</p><div class="tag-list"><span class="tag">Requirements gathering</span><span class="tag">Process analysis</span><span class="tag">A/B testing</span><span class="tag">ETL pipelines</span><span class="tag">Data storytelling</span><span class="tag">Stakeholder communication</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume: business analysis skills; Business Analysis Foundations course completion.</p><a href="certificates/certificate-23.pdf" target="_blank" rel="noopener">Business Analysis Foundations ↗</a></details></article><article class="card skill-card" data-skill-roles="software"><span class="skill-number">05 /</span><h3>Software &amp; connected systems</h3><p class="muted">Build around APIs, databases and real-world inputs.</p><div class="tag-list"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Gemini API</span><span class="tag">Ethereum</span><span class="tag">IPFS</span><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">Git / GitHub</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume projects: MediAssist AI, MediVault and Automated Irrigation. Software architecture coursework.</p><a href="certificates/certificate-19.pdf" target="_blank" rel="noopener">Introduction to Software Architecture ↗</a></details></article><article class="card skill-card" data-skill-roles="software"><span class="skill-number">06 /</span><h3>Cloud &amp; security foundations</h3><p class="muted">Developing foundations in cloud platforms and secure systems.</p><div class="tag-list"><span class="tag">Google Cloud foundations</span><span class="tag">Azure Cognitive Services</span><span class="tag">Network security</span><span class="tag">Cryptography</span><span class="tag">Cybersecurity fundamentals</span><span class="tag">Linux</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Course learning: Google Cloud Foundations, Azure computer vision, Applied Cryptography and Cisco network security.</p><a href="certificates/certificate-30.pdf" target="_blank" rel="noopener">Google Cloud Foundations ↗</a></details></article><article class="card skill-card" data-skill-roles="business"><span class="skill-number">07 /</span><h3>Design &amp; communication</h3><p class="muted">Make technical ideas clear, visual and worth paying attention to.</p><div class="tag-list"><span class="tag">Adobe Photoshop</span><span class="tag">Content writing</span><span class="tag">Content marketing</span><span class="tag">Public relations</span><span class="tag">Visual storytelling</span><span class="tag">Public speaking</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Experience: CollegeTips.in, NebulaPioneers and Ureckon. Photoshop and content marketing coursework.</p><a href="certificates/certificate-36.pdf" target="_blank" rel="noopener">Photoshop: New AI Features ↗</a></details></article><article class="card skill-card" data-skill-roles="business software"><span class="skill-number">08 /</span><h3>Delivery &amp; collaboration</h3><p class="muted">Organize work and communicate across a team.</p><div class="tag-list"><span class="tag">Agile concepts</span><span class="tag">Leadership</span><span class="tag">Teamwork</span><span class="tag">Time management</span><span class="tag">Problem solving</span><span class="tag">MATLAB</span><span class="tag">Microsoft Copilot</span><span class="tag">MS Office</span></div><details class="skill-evidence"><summary>Explore the evidence</summary><p>Resume tools and core competencies; Agile Project Management and leadership course completions.</p><a href="certificates/certificate-01.pdf" target="_blank" rel="noopener">Agile Project Management ↗</a></details></article></div></div></section>
+      <div id="skillControls" class="skill-controls" role="group" aria-label="Explore skills by role" hidden>
+        <button class="skill-filter" type="button" data-skill-filter="all" aria-pressed="true">All skills</button>
+        <button class="skill-filter" type="button" data-skill-filter="data" aria-pressed="false">Data analyst</button>
+        <button class="skill-filter" type="button" data-skill-filter="software" aria-pressed="false">Software &amp; cloud</button>
+        <button class="skill-filter" type="button" data-skill-filter="business" aria-pressed="false">Business &amp; communication</button>
+      </div>
+      <p id="skillStatus" class="muted" role="status" aria-live="polite">8 skill areas · Click connected certificates or expand evidence to verify.</p>
+      <div class="grid" id="skillsGrid">
+        <article class="card skill-card" data-skill-roles="data business">
+          <span class="skill-number">01 /</span>
+          <h3>Data analysis &amp; SQL</h3>
+          <p class="muted">Clean, query and explore data before drawing conclusions.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SQL joins</span>
+            <span class="tag">CTEs</span>
+            <span class="tag">Window functions</span>
+            <span class="tag">EDA</span>
+            <span class="tag">Data cleaning</span>
+            <span class="tag">Statistical analysis</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-20.pdf" target="_blank" rel="noopener" class="cert-pill">Introduction to SQL <span class="cert-pill-issuer">Simplilearn ↗</span></a></li>
+              <li><a href="certificates/certificate-18.pdf" target="_blank" rel="noopener" class="cert-pill">Data Analytics with AI <span class="cert-pill-issuer">IBM SkillsBuild ↗</span></a></li>
+              <li><a href="certificates/certificate-34.pdf" target="_blank" rel="noopener" class="cert-pill">Data Analytics: 1 Foundations <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume: data and analytics toolkit; IBM HR attrition (1,470 records) and Telco customer churn (7,043 records) projects.</p>
+            <a href="certificates/certificate-20.pdf" target="_blank" rel="noopener">View SQL Certificate ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="data business">
+          <span class="skill-number">02 /</span>
+          <h3>Dashboards &amp; business intelligence</h3>
+          <p class="muted">Turn analysis into decisions people can see and use.</p>
+          <div class="tag-list">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Pivot tables</span>
+            <span class="tag">VLOOKUP</span>
+            <span class="tag">KPI reporting</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-16.pdf" target="_blank" rel="noopener" class="cert-pill">Power BI Job Simulation <span class="cert-pill-issuer">PwC · Forage ↗</span></a></li>
+              <li><a href="certificates/certificate-15.pdf" target="_blank" rel="noopener" class="cert-pill">Excel Skills Job Simulation <span class="cert-pill-issuer">JPMorgan Chase ↗</span></a></li>
+              <li><a href="certificates/certificate-28.pdf" target="_blank" rel="noopener" class="cert-pill">Excel Essential Training <span class="cert-pill-issuer">NASBA CPE ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume: Power BI and Tableau dashboards for HR attrition risk and loan risk analysis.</p>
+            <a href="certificates/certificate-16.pdf" target="_blank" rel="noopener">View Power BI Job Simulation ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="data software">
+          <span class="skill-number">03 /</span>
+          <h3>Machine learning &amp; AI</h3>
+          <p class="muted">Explore predictive models and explain what drives their results.</p>
+          <div class="tag-list">
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Logistic regression</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">K-Means</span>
+            <span class="tag">Generative AI</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-17.pdf" target="_blank" rel="noopener" class="cert-pill">GenAI Powered Analytics <span class="cert-pill-issuer">Tata · Forage ↗</span></a></li>
+              <li><a href="certificates/certificate-24.pdf" target="_blank" rel="noopener" class="cert-pill">Career Essentials in GenAI <span class="cert-pill-issuer">Microsoft &amp; LinkedIn ↗</span></a></li>
+              <li><a href="certificates/certificate-12.pdf" target="_blank" rel="noopener" class="cert-pill">Introduction to Generative AI <span class="cert-pill-issuer">Google Cloud ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume: Loan Default risk analysis (32k+ applications, 0.876 ROC-AUC) and HR attrition risk scoring.</p>
+            <a href="certificates/certificate-17.pdf" target="_blank" rel="noopener">View Tata GenAI Analytics ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="data business">
+          <span class="skill-number">04 /</span>
+          <h3>Business analysis</h3>
+          <p class="muted">Connect a business question to requirements, measures and recommendations.</p>
+          <div class="tag-list">
+            <span class="tag">Requirements gathering</span>
+            <span class="tag">Process analysis</span>
+            <span class="tag">A/B testing</span>
+            <span class="tag">ETL pipelines</span>
+            <span class="tag">Data storytelling</span>
+            <span class="tag">Stakeholder communication</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-23.pdf" target="_blank" rel="noopener" class="cert-pill">Business Analysis Foundations <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+              <li><a href="certificates/certificate-07.pdf" target="_blank" rel="noopener" class="cert-pill">Create a Project Charter <span class="cert-pill-issuer">Coursera ↗</span></a></li>
+              <li><a href="certificates/certificate-32.pdf" target="_blank" rel="noopener" class="cert-pill">Leadership Foundations <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume: business analysis toolkit, KPI frameworks, and prescriptive recommendation engine for customer retention.</p>
+            <a href="certificates/certificate-23.pdf" target="_blank" rel="noopener">View Business Analysis Certificate ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="software">
+          <span class="skill-number">05 /</span>
+          <h3>Software &amp; connected systems</h3>
+          <p class="muted">Build around APIs, databases and real-world inputs.</p>
+          <div class="tag-list">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">IPFS</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Git / GitHub</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-19.pdf" target="_blank" rel="noopener" class="cert-pill">Software Architecture <span class="cert-pill-issuer">Simplilearn ↗</span></a></li>
+              <li><a href="certificates/certificate-33.pdf" target="_blank" rel="noopener" class="cert-pill">AI with GitHub Copilot <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+              <li><a href="certificates/certificate-27.pdf" target="_blank" rel="noopener" class="cert-pill">Electronics: Basic Circuits <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume projects: MediAssist AI (Gemini + MongoDB), MediVault (Ethereum/IPFS), and Automated Irrigation System.</p>
+            <a href="certificates/certificate-19.pdf" target="_blank" rel="noopener">View Software Architecture ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="software">
+          <span class="skill-number">06 /</span>
+          <h3>Cloud &amp; security foundations</h3>
+          <p class="muted">Developing foundations in cloud platforms and secure systems.</p>
+          <div class="tag-list">
+            <span class="tag">Google Cloud foundations</span>
+            <span class="tag">Azure Cognitive Services</span>
+            <span class="tag">Network security</span>
+            <span class="tag">Cryptography</span>
+            <span class="tag">Cybersecurity fundamentals</span>
+            <span class="tag">Linux</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-30.pdf" target="_blank" rel="noopener" class="cert-pill">Google Cloud Foundations <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+              <li><a href="certificates/certificate-06.pdf" target="_blank" rel="noopener" class="cert-pill">Vision with Azure Cognitive Services <span class="cert-pill-issuer">Microsoft ↗</span></a></li>
+              <li><a href="certificates/certificate-03.pdf" target="_blank" rel="noopener" class="cert-pill">Cisco Network Security <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Course learning: Google Cloud Foundations, Azure computer vision, Applied Cryptography (CU Boulder) and Cisco network security.</p>
+            <a href="certificates/certificate-30.pdf" target="_blank" rel="noopener">View Google Cloud Foundations ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="business">
+          <span class="skill-number">07 /</span>
+          <h3>Design &amp; communication</h3>
+          <p class="muted">Make technical ideas clear, visual and worth paying attention to.</p>
+          <div class="tag-list">
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Content writing</span>
+            <span class="tag">Content marketing</span>
+            <span class="tag">Public relations</span>
+            <span class="tag">Visual storytelling</span>
+            <span class="tag">Public speaking</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-36.pdf" target="_blank" rel="noopener" class="cert-pill">Photoshop: New AI Features <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+              <li><a href="certificates/certificate-21.pdf" target="_blank" rel="noopener" class="cert-pill">Advanced Content Marketing <span class="cert-pill-issuer">PMI Credit Record ↗</span></a></li>
+              <li><a href="certificates/certificate-14.pdf" target="_blank" rel="noopener" class="cert-pill">Design Course Collateral <span class="cert-pill-issuer">Coursera ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Experience: PR Manager at NebulaPioneers, LinkedIn content for Ureckon tech event, design at CollegeTips.in.</p>
+            <a href="certificates/certificate-36.pdf" target="_blank" rel="noopener">View Photoshop Certificate ↗</a>
+          </details>
+        </article>
+
+        <article class="card skill-card" data-skill-roles="business software">
+          <span class="skill-number">08 /</span>
+          <h3>Delivery &amp; collaboration</h3>
+          <p class="muted">Organize work and communicate across a team.</p>
+          <div class="tag-list">
+            <span class="tag">Agile concepts</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Time management</span>
+            <span class="tag">Problem solving</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Microsoft Copilot</span>
+            <span class="tag">MS Office</span>
+          </div>
+          <div class="skill-cert-links">
+            <span class="skill-cert-heading">Connected Certificates</span>
+            <ul class="skill-cert-list">
+              <li><a href="certificates/certificate-01.pdf" target="_blank" rel="noopener" class="cert-pill">Agile Project Management <span class="cert-pill-issuer">HP LIFE ↗</span></a></li>
+              <li><a href="certificates/certificate-35.pdf" target="_blank" rel="noopener" class="cert-pill">Learning MATLAB <span class="cert-pill-issuer">LinkedIn Learning ↗</span></a></li>
+              <li><a href="certificates/certificate-25.pdf" target="_blank" rel="noopener" class="cert-pill">Efficient Time Management <span class="cert-pill-issuer">PMI Credit Record ↗</span></a></li>
+            </ul>
+          </div>
+          <details class="skill-evidence">
+            <summary>Explore the evidence</summary>
+            <p>Resume tools and core competencies; Agile methodologies, leadership and technical computing coursework.</p>
+            <a href="certificates/certificate-01.pdf" target="_blank" rel="noopener">View Agile Certificate ↗</a>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section id="certifications" aria-labelledby="certHeading"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">04 / ALWAYS LEARNING</div><h2 id="certHeading">Curiosity, with receipts.</h2></div><p>Explore my course certificates, learning paths and practical job simulations across data, technology and communication.</p></div>

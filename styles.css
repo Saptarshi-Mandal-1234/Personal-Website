@@ -1446,3 +1446,87 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
 .about-portrait figcaption span:first-child{font-family:Consolas,monospace;font-size:13px;letter-spacing:.1em}
 .about-portrait figcaption span:last-child{font-size:14px;color:var(--text-muted)}
 @media(max-width:700px){.about-portrait{max-width:320px;margin:24px auto 0}}
+
+/* Connected certificates on skill cards */
+.skill-cert-links {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skill-cert-heading {
+  font-size: 11px;
+  font-family: Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.skill-cert-heading::before {
+  content: '✓';
+  color: var(--lime-dark);
+  font-weight: bold;
+}
+[data-theme="dark"] .skill-cert-heading::before {
+  color: var(--lime);
+}
+.skill-cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.skill-cert-list li {
+  margin: 0;
+}
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 38px;
+  width: 100%;
+}
+.cert-pill:hover {
+  background: var(--line);
+  border-color: var(--lime-accent);
+  color: var(--lime-dark);
+  transform: translateX(3px);
+}
+[data-theme="dark"] .cert-pill:hover {
+  background: #11281c;
+  border-color: var(--lime);
+  color: var(--lime);
+}
+.cert-pill-issuer {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+  padding-left: 6px;
+  opacity: 0.85;
+}
+
+
+/* Review fixes and focused case-study pages. */
+.cert-pill{min-height:44px;flex-wrap:wrap}.cert-pill-issuer{opacity:1}.cert-pill:hover{background:var(--tag-bg)}
+.project-preview{display:block;margin-bottom:20px;background:#f5f8f6;border-radius:8px;overflow:hidden}
+.project-preview img{display:block;width:100%;height:190px;object-fit:contain}
+.case-page{padding-top:40px;padding-bottom:70px;max-width:1000px}.case-page h1{font-size:clamp(32px,5vw,56px);line-height:1.15;margin:24px 0}.case-intro{font-size:20px;color:var(--text-muted)}
+.case-figure{margin:32px 0}.case-figure img{width:100%;height:auto;background:white;border-radius:10px}.case-figure figcaption{font-size:14px;line-height:1.6;color:var(--text-muted);margin-top:10px}
+.case-sections section{padding:24px 0;border-top:1px solid var(--border-color)}.case-sections h2{font-size:25px;margin:0 0 12px}.case-sections p{font-size:17px;line-height:1.8;max-width:78ch}
+@media(prefers-reduced-motion:reduce){.cert-pill{transition:none!important}.cert-pill:hover{transform:none}}

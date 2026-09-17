@@ -209,7 +209,7 @@ const projectData = {
     "category": "MACHINE LEARNING",
     "title": "Loan Default & Credit Risk Analysis",
     "lead": "Making risk easier to understand.",
-    "desc": "Analyzed 32,000+ loan applications using Logistic Regression, Random Forest and XGBoost. Achieved 80.6% accuracy and 0.876 ROC-AUC, with SHAP insights in an interactive Tableau dashboard.",
+    "desc": "Analyzed 32,000+ loan applications using Logistic Regression, Random Forest and Gradient Boosting. The saved logistic-regression baseline reports 80.6% accuracy and 0.876 ROC-AUC; see the case study for validation limitations and the Tableau output.",
     "tags": [
       "Python",
       "XGBoost",
