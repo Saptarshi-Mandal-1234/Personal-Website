@@ -391,33 +391,6 @@ if (reduceMotionQuery.matches || !('IntersectionObserver' in window)) {
   revealTargets.forEach((el) => revealObserver.observe(el));
 }
 
-/* ==========================================================================
-   7. Preserved Selenium Practice Lab Interactions
-   ========================================================================== */
-const output = document.getElementById('labOutput');
-const form = document.getElementById('practiceForm');
-const showCountBtn = document.getElementById('showCount');
-
-if (form && output) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const userField = document.getElementById('username');
-    const user = (userField ? userField.value.trim() : '') || 'Guest';
-    output.textContent = `Demo submitted successfully for ${user}.`;
-  });
-
-  form.addEventListener('reset', () => {
-    output.textContent = 'Form cleared.';
-  });
-}
-
-if (showCountBtn && output) {
-  showCountBtn.addEventListener('click', () => {
-    // Queries all project cards in DOM — includes every project regardless of filtering!
-    output.textContent = `Total project cards: ${document.querySelectorAll('[id^="project_"]').length}`;
-  });
-}
-
 // Copy the public contact address with clear success/failure feedback.
 const copyEmail = document.getElementById('copyEmail');
 if (copyEmail && navigator.clipboard && window.isSecureContext) {
