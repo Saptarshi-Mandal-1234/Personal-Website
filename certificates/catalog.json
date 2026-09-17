@@ -6,16 +6,8 @@
     "category": "data",
     "kind": "Academic internship",
     "file": "certificates/certificate-18.pdf",
-    "original": "IBM SKILLBUILD.pdf"
-  },
-  {
-    "id": 17,
-    "title": "TATA GenAI Powered Data Analytics Job Simulation",
-    "issuer": "Tata · Forage",
-    "category": "data",
-    "kind": "Job simulation",
-    "file": "certificates/certificate-17.pdf",
-    "original": "Forage - TATA GenAI Powered Data Analytics Job Simulation.pdf"
+    "original": "IBM SKILLBUILD.pdf",
+    "priority": 1
   },
   {
     "id": 16,
@@ -24,7 +16,18 @@
     "category": "data",
     "kind": "Job simulation",
     "file": "certificates/certificate-16.pdf",
-    "original": "Forage - PwC Switzerland Power BI Job Simulation.pdf"
+    "original": "Forage - PwC Switzerland Power BI Job Simulation.pdf",
+    "priority": 2
+  },
+  {
+    "id": 17,
+    "title": "TATA GenAI Powered Data Analytics Job Simulation",
+    "issuer": "Tata · Forage",
+    "category": "data",
+    "kind": "Job simulation",
+    "file": "certificates/certificate-17.pdf",
+    "original": "Forage - TATA GenAI Powered Data Analytics Job Simulation.pdf",
+    "priority": 3
   },
   {
     "id": 20,
@@ -33,151 +36,8 @@
     "category": "data",
     "kind": "Course completion",
     "file": "certificates/certificate-20.pdf",
-    "original": "Introduction to SQL - SimpliLearn.pdf"
-  },
-  {
-    "id": 30,
-    "title": "Google Cloud Foundations",
-    "issuer": "LinkedIn Learning",
-    "category": "ai",
-    "kind": "Course completion",
-    "file": "certificates/certificate-30.pdf",
-    "original": "LinkedInLearning - Google Cloud Foundations.pdf"
-  },
-  {
-    "id": 24,
-    "title": "Career Essentials in Generative AI",
-    "issuer": "Microsoft & LinkedIn",
-    "category": "ai",
-    "kind": "Learning path",
-    "file": "certificates/certificate-24.pdf",
-    "original": "LinkedInLearning - CertificateOfCompletion_Career Essentials in Generative AI - Microsoft.pdf"
-  },
-  {
-    "id": 1,
-    "title": "Agile Project Management",
-    "issuer": "HP LIFE",
-    "category": "business",
-    "kind": "Course completion",
-    "file": "certificates/certificate-01.pdf",
-    "original": "Agile Project Management - HP Life.pdf"
-  },
-  {
-    "id": 2,
-    "title": "AI Product Management Course",
-    "issuer": "Simplilearn SkillUp",
-    "category": "ai",
-    "kind": "Course completion",
-    "file": "certificates/certificate-02.pdf",
-    "original": "AI Product Management Course - SimpliLearn.pdf"
-  },
-  {
-    "id": 3,
-    "title": "Cisco Network Security: Safeguarding Network Integrity and Data",
-    "issuer": "LinkedIn Learning",
-    "category": "systems",
-    "kind": "Learning path",
-    "file": "certificates/certificate-03.pdf",
-    "original": "CertificateOfCompletion_Cisco Network Security Safeguarding Network Integrity and Data.pdf"
-  },
-  {
-    "id": 4,
-    "title": "Advanced System Security Topics",
-    "issuer": "University of Colorado System · Coursera",
-    "category": "systems",
-    "kind": "Course completion",
-    "file": "certificates/certificate-04.pdf",
-    "original": "Coursera - Advanced System Security Topics - University of Colorado System.pdf"
-  },
-  {
-    "id": 5,
-    "title": "Applied Cryptography",
-    "issuer": "University of Colorado System · Coursera",
-    "category": "systems",
-    "kind": "Specialization",
-    "file": "certificates/certificate-05.pdf",
-    "original": "Coursera - Applied Cryptography - University of Colorado Systems.pdf"
-  },
-  {
-    "id": 6,
-    "title": "Build a computer vision app with Azure Cognitive Services",
-    "issuer": "Microsoft · Coursera",
-    "category": "ai",
-    "kind": "Guided project",
-    "file": "certificates/certificate-06.pdf",
-    "original": "Coursera - Build a computer vision app with Azure Cognitive Services - Microsoft.pdf"
-  },
-  {
-    "id": 7,
-    "title": "Create a Project Charter with Google Docs",
-    "issuer": "Coursera Project Network",
-    "category": "business",
-    "kind": "Guided project",
-    "file": "certificates/certificate-07.pdf",
-    "original": "Coursera - Create a Project Charter with Google Docs.pdf"
-  },
-  {
-    "id": 8,
-    "title": "Cyber Security Fundamentals",
-    "issuer": "University of London · Coursera",
-    "category": "systems",
-    "kind": "Course completion",
-    "file": "certificates/certificate-08.pdf",
-    "original": "Coursera - Cyber Security Fundementals - University of London.pdf"
-  },
-  {
-    "id": 9,
-    "title": "Generative AI Essentials: Overview and Impact",
-    "issuer": "University of Michigan · Coursera",
-    "category": "ai",
-    "kind": "Course completion",
-    "file": "certificates/certificate-09.pdf",
-    "original": "Coursera - Generative AI Essentials Overview and Impact - University of Michigan.pdf"
-  },
-  {
-    "id": 10,
-    "title": "Google Ads for Beginners",
-    "issuer": "Coursera Project Network",
-    "category": "creative",
-    "kind": "Guided project",
-    "file": "certificates/certificate-10.pdf",
-    "original": "Coursera - Google Ads for Beginners.pdf"
-  },
-  {
-    "id": 11,
-    "title": "Information Theory",
-    "issuer": "The Chinese University of Hong Kong · Coursera",
-    "category": "data",
-    "kind": "Course completion",
-    "file": "certificates/certificate-11.pdf",
-    "original": "Coursera - INFORMATION THEORY -The Chinese University of Hong Kong.pdf"
-  },
-  {
-    "id": 12,
-    "title": "Introduction to Generative AI",
-    "issuer": "Google Cloud · Coursera",
-    "category": "ai",
-    "kind": "Course completion",
-    "file": "certificates/certificate-12.pdf",
-    "original": "Coursera - Introduction to Generative AI - Google.pdf"
-  },
-  {
-    "id": 13,
-    "title": "Search Engine Optimization (SEO) with Squarespace",
-    "issuer": "Coursera Project Network",
-    "category": "creative",
-    "kind": "Guided project",
-    "file": "certificates/certificate-13.pdf",
-    "original": "Coursera - Search Engine Optimization (SEO) with Squarespace.pdf"
-  },
-  {
-    "id": 14,
-    "title": "Use Canva to Design Digital Course Collateral",
-    "issuer": "Coursera Project Network",
-    "category": "creative",
-    "kind": "Guided project",
-    "file": "certificates/certificate-14.pdf",
-    "original": "Coursera - Use Canva to Design Digital Course Collateral.pdf"
+    "original": "Introduction to SQL - SimpliLearn.pdf",
+    "priority": 4
   },
   {
     "id": 15,
@@ -186,115 +46,8 @@
     "category": "data",
     "kind": "Job simulation",
     "file": "certificates/certificate-15.pdf",
-    "original": "Forage - JPMorgan Chase & Co. Excel Skills Job Simulation.pdf"
-  },
-  {
-    "id": 19,
-    "title": "Introduction to Software Architecture",
-    "issuer": "Simplilearn SkillUp",
-    "category": "systems",
-    "kind": "Course completion",
-    "file": "certificates/certificate-19.pdf",
-    "original": "Introduction to Software Architecture -SimpliLearn.pdf"
-  },
-  {
-    "id": 21,
-    "title": "Advanced Content Marketing",
-    "issuer": "LinkedIn Learning",
-    "category": "creative",
-    "kind": "PMI credit record",
-    "file": "certificates/certificate-21.pdf",
-    "original": "LinkedInLearning - Advanced Content Marketing - Project Management Institute, Inc.pdf"
-  },
-  {
-    "id": 22,
-    "title": "Advanced Content Marketing",
-    "issuer": "LinkedIn Learning",
-    "category": "creative",
-    "kind": "Course completion",
-    "file": "certificates/certificate-22.pdf",
-    "original": "LinkedInLearning - Advanced Content Marketing.pdf"
-  },
-  {
-    "id": 23,
-    "title": "Business Analysis Foundations",
-    "issuer": "LinkedIn Learning",
-    "category": "data",
-    "kind": "Course completion",
-    "file": "certificates/certificate-23.pdf",
-    "original": "LinkedInLearning - Business Analysis Foundations.pdf"
-  },
-  {
-    "id": 25,
-    "title": "Efficient Time Management ",
-    "issuer": "LinkedIn Learning",
-    "category": "business",
-    "kind": "PMI credit record",
-    "file": "certificates/certificate-25.pdf",
-    "original": "LinkedInLearning - Efficient Time Management  - Project Management Institute, Inc.pdf"
-  },
-  {
-    "id": 26,
-    "title": "Efficient Time Management",
-    "issuer": "LinkedIn Learning",
-    "category": "business",
-    "kind": "Course completion",
-    "file": "certificates/certificate-26.pdf",
-    "original": "LinkedInLearning - Efficient Time Management.pdf"
-  },
-  {
-    "id": 27,
-    "title": "Electronics Foundations: Basic Circuits",
-    "issuer": "LinkedIn Learning",
-    "category": "systems",
-    "kind": "Course completion",
-    "file": "certificates/certificate-27.pdf",
-    "original": "LinkedInLearning - Electronics Foundations Basic Circuits.pdf"
-  },
-  {
-    "id": 28,
-    "title": "Excel Essential Training (Microsoft 365)",
-    "issuer": "LinkedIn Learning",
-    "category": "data",
-    "kind": "NASBA CPE record",
-    "file": "certificates/certificate-28.pdf",
-    "original": "LinkedInLearning - Excel Essential Training Microsoft 365 - NASBA.pdf"
-  },
-  {
-    "id": 29,
-    "title": "Excel Essential Training (Microsoft 365)",
-    "issuer": "LinkedIn Learning",
-    "category": "data",
-    "kind": "Course completion",
-    "file": "certificates/certificate-29.pdf",
-    "original": "LinkedInLearning - Excel Essential Training Microsoft 365.pdf"
-  },
-  {
-    "id": 31,
-    "title": "Leadership Foundations",
-    "issuer": "LinkedIn Learning",
-    "category": "business",
-    "kind": "PMI credit record",
-    "file": "certificates/certificate-31.pdf",
-    "original": "LinkedInLearning - Leadership Foundations - Project Management Institute, Inc.pdf"
-  },
-  {
-    "id": 32,
-    "title": "Leadership Foundations",
-    "issuer": "LinkedIn Learning",
-    "category": "business",
-    "kind": "Course completion",
-    "file": "certificates/certificate-32.pdf",
-    "original": "LinkedInLearning - Leadership Foundations.pdf"
-  },
-  {
-    "id": 33,
-    "title": "Learning AI with GitHub Copilot",
-    "issuer": "LinkedIn Learning",
-    "category": "ai",
-    "kind": "Course completion",
-    "file": "certificates/certificate-33.pdf",
-    "original": "LinkedInLearning - Learning AI with GitHub Copilot.pdf"
+    "original": "Forage - JPMorgan Chase & Co. Excel Skills Job Simulation.pdf",
+    "priority": 5
   },
   {
     "id": 34,
@@ -303,7 +56,168 @@
     "category": "data",
     "kind": "Course completion",
     "file": "certificates/certificate-34.pdf",
-    "original": "LinkedInLearning - Learning Data Analytics 1 Foundations.pdf"
+    "original": "LinkedInLearning - Learning Data Analytics 1 Foundations.pdf",
+    "priority": 6
+  },
+  {
+    "id": 29,
+    "title": "Excel Essential Training (Microsoft 365)",
+    "issuer": "LinkedIn Learning",
+    "category": "data",
+    "kind": "Course completion",
+    "file": "certificates/certificate-29.pdf",
+    "original": "LinkedInLearning - Excel Essential Training Microsoft 365.pdf",
+    "priority": 7
+  },
+  {
+    "id": 23,
+    "title": "Business Analysis Foundations",
+    "issuer": "LinkedIn Learning",
+    "category": "data",
+    "kind": "Course completion",
+    "file": "certificates/certificate-23.pdf",
+    "original": "LinkedInLearning - Business Analysis Foundations.pdf",
+    "priority": 8
+  },
+  {
+    "id": 24,
+    "title": "Career Essentials in Generative AI",
+    "issuer": "Microsoft & LinkedIn",
+    "category": "ai",
+    "kind": "Learning path",
+    "file": "certificates/certificate-24.pdf",
+    "original": "LinkedInLearning - CertificateOfCompletion_Career Essentials in Generative AI - Microsoft.pdf",
+    "priority": 9
+  },
+  {
+    "id": 6,
+    "title": "Build a computer vision app with Azure Cognitive Services",
+    "issuer": "Microsoft · Coursera",
+    "category": "ai",
+    "kind": "Guided project",
+    "file": "certificates/certificate-06.pdf",
+    "original": "Coursera - Build a computer vision app with Azure Cognitive Services - Microsoft.pdf",
+    "priority": 10
+  },
+  {
+    "id": 30,
+    "title": "Google Cloud Foundations",
+    "issuer": "LinkedIn Learning",
+    "category": "ai",
+    "kind": "Course completion",
+    "file": "certificates/certificate-30.pdf",
+    "original": "LinkedInLearning - Google Cloud Foundations.pdf",
+    "priority": 11
+  },
+  {
+    "id": 33,
+    "title": "Learning AI with GitHub Copilot",
+    "issuer": "LinkedIn Learning",
+    "category": "ai",
+    "kind": "Course completion",
+    "file": "certificates/certificate-33.pdf",
+    "original": "LinkedInLearning - Learning AI with GitHub Copilot.pdf",
+    "priority": 12
+  },
+  {
+    "id": 12,
+    "title": "Introduction to Generative AI",
+    "issuer": "Google Cloud · Coursera",
+    "category": "ai",
+    "kind": "Course completion",
+    "file": "certificates/certificate-12.pdf",
+    "original": "Coursera - Introduction to Generative AI - Google.pdf",
+    "priority": 13
+  },
+  {
+    "id": 9,
+    "title": "Generative AI Essentials: Overview and Impact",
+    "issuer": "University of Michigan · Coursera",
+    "category": "ai",
+    "kind": "Course completion",
+    "file": "certificates/certificate-09.pdf",
+    "original": "Coursera - Generative AI Essentials Overview and Impact - University of Michigan.pdf",
+    "priority": 14
+  },
+  {
+    "id": 19,
+    "title": "Introduction to Software Architecture",
+    "issuer": "Simplilearn SkillUp",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-19.pdf",
+    "original": "Introduction to Software Architecture -SimpliLearn.pdf",
+    "priority": 15
+  },
+  {
+    "id": 5,
+    "title": "Applied Cryptography",
+    "issuer": "University of Colorado System · Coursera",
+    "category": "systems",
+    "kind": "Specialization",
+    "file": "certificates/certificate-05.pdf",
+    "original": "Coursera - Applied Cryptography - University of Colorado Systems.pdf",
+    "priority": 16
+  },
+  {
+    "id": 3,
+    "title": "Cisco Network Security: Safeguarding Network Integrity and Data",
+    "issuer": "LinkedIn Learning",
+    "category": "systems",
+    "kind": "Learning path",
+    "file": "certificates/certificate-03.pdf",
+    "original": "CertificateOfCompletion_Cisco Network Security Safeguarding Network Integrity and Data.pdf",
+    "priority": 17
+  },
+  {
+    "id": 8,
+    "title": "Cyber Security Fundamentals",
+    "issuer": "University of London · Coursera",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-08.pdf",
+    "original": "Coursera - Cyber Security Fundementals - University of London.pdf",
+    "priority": 18
+  },
+  {
+    "id": 4,
+    "title": "Advanced System Security Topics",
+    "issuer": "University of Colorado System · Coursera",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-04.pdf",
+    "original": "Coursera - Advanced System Security Topics - University of Colorado System.pdf",
+    "priority": 19
+  },
+  {
+    "id": 11,
+    "title": "Information Theory",
+    "issuer": "The Chinese University of Hong Kong · Coursera",
+    "category": "data",
+    "kind": "Course completion",
+    "file": "certificates/certificate-11.pdf",
+    "original": "Coursera - INFORMATION THEORY -The Chinese University of Hong Kong.pdf",
+    "priority": 20
+  },
+  {
+    "id": 2,
+    "title": "AI Product Management Course",
+    "issuer": "Simplilearn SkillUp",
+    "category": "ai",
+    "kind": "Course completion",
+    "file": "certificates/certificate-02.pdf",
+    "original": "AI Product Management Course - SimpliLearn.pdf",
+    "priority": 21
+  },
+  {
+    "id": 1,
+    "title": "Agile Project Management",
+    "issuer": "HP LIFE",
+    "category": "business",
+    "kind": "Course completion",
+    "file": "certificates/certificate-01.pdf",
+    "original": "Agile Project Management - HP Life.pdf",
+    "priority": 22
   },
   {
     "id": 35,
@@ -312,25 +226,18 @@
     "category": "data",
     "kind": "Course completion",
     "file": "certificates/certificate-35.pdf",
-    "original": "LinkedInLearning - Learning MATLAB.pdf"
+    "original": "LinkedInLearning - Learning MATLAB.pdf",
+    "priority": 23
   },
   {
-    "id": 36,
-    "title": "Photoshop 2024: New AI Features",
-    "issuer": "LinkedIn Learning",
-    "category": "creative",
-    "kind": "Course completion",
-    "file": "certificates/certificate-36.pdf",
-    "original": "LinkedInLearning - Photoshop 2024 New AI Features.pdf"
-  },
-  {
-    "id": 37,
-    "title": "Skills to Build Stronger Work Relationships",
+    "id": 32,
+    "title": "Leadership Foundations",
     "issuer": "LinkedIn Learning",
     "category": "business",
-    "kind": "PMI credit record",
-    "file": "certificates/certificate-37.pdf",
-    "original": "LinkedInLearning - Skills to Build Stronger Work Relationships - Project Management Institute, Inc.pdf"
+    "kind": "Course completion",
+    "file": "certificates/certificate-32.pdf",
+    "original": "LinkedInLearning - Leadership Foundations.pdf",
+    "priority": 24
   },
   {
     "id": 38,
@@ -339,6 +246,137 @@
     "category": "business",
     "kind": "Course completion",
     "file": "certificates/certificate-38.pdf",
-    "original": "LinkedInLearning - Skills to Build Stronger Work Relationships.pdf"
+    "original": "LinkedInLearning - Skills to Build Stronger Work Relationships.pdf",
+    "priority": 25
+  },
+  {
+    "id": 22,
+    "title": "Advanced Content Marketing",
+    "issuer": "LinkedIn Learning",
+    "category": "creative",
+    "kind": "Course completion",
+    "file": "certificates/certificate-22.pdf",
+    "original": "LinkedInLearning - Advanced Content Marketing.pdf",
+    "priority": 26
+  },
+  {
+    "id": 36,
+    "title": "Photoshop 2024: New AI Features",
+    "issuer": "LinkedIn Learning",
+    "category": "creative",
+    "kind": "Course completion",
+    "file": "certificates/certificate-36.pdf",
+    "original": "LinkedInLearning - Photoshop 2024 New AI Features.pdf",
+    "priority": 27
+  },
+  {
+    "id": 27,
+    "title": "Electronics Foundations: Basic Circuits",
+    "issuer": "LinkedIn Learning",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-27.pdf",
+    "original": "LinkedInLearning - Electronics Foundations Basic Circuits.pdf",
+    "priority": 28
+  },
+  {
+    "id": 26,
+    "title": "Efficient Time Management",
+    "issuer": "LinkedIn Learning",
+    "category": "business",
+    "kind": "Course completion",
+    "file": "certificates/certificate-26.pdf",
+    "original": "LinkedInLearning - Efficient Time Management.pdf",
+    "priority": 29
+  },
+  {
+    "id": 7,
+    "title": "Create a Project Charter with Google Docs",
+    "issuer": "Coursera Project Network",
+    "category": "business",
+    "kind": "Guided project",
+    "file": "certificates/certificate-07.pdf",
+    "original": "Coursera - Create a Project Charter with Google Docs.pdf",
+    "priority": 30
+  },
+  {
+    "id": 14,
+    "title": "Use Canva to Design Digital Course Collateral",
+    "issuer": "Coursera Project Network",
+    "category": "creative",
+    "kind": "Guided project",
+    "file": "certificates/certificate-14.pdf",
+    "original": "Coursera - Use Canva to Design Digital Course Collateral.pdf",
+    "priority": 31
+  },
+  {
+    "id": 13,
+    "title": "Search Engine Optimization (SEO) with Squarespace",
+    "issuer": "Coursera Project Network",
+    "category": "creative",
+    "kind": "Guided project",
+    "file": "certificates/certificate-13.pdf",
+    "original": "Coursera - Search Engine Optimization (SEO) with Squarespace.pdf",
+    "priority": 32
+  },
+  {
+    "id": 10,
+    "title": "Google Ads for Beginners",
+    "issuer": "Coursera Project Network",
+    "category": "creative",
+    "kind": "Guided project",
+    "file": "certificates/certificate-10.pdf",
+    "original": "Coursera - Google Ads for Beginners.pdf",
+    "priority": 33
+  },
+  {
+    "id": 28,
+    "title": "Excel Essential Training (Microsoft 365)",
+    "issuer": "LinkedIn Learning",
+    "category": "data",
+    "kind": "NASBA CPE record",
+    "file": "certificates/certificate-28.pdf",
+    "original": "LinkedInLearning - Excel Essential Training Microsoft 365 - NASBA.pdf",
+    "priority": 34
+  },
+  {
+    "id": 31,
+    "title": "Leadership Foundations",
+    "issuer": "LinkedIn Learning",
+    "category": "business",
+    "kind": "PMI credit record",
+    "file": "certificates/certificate-31.pdf",
+    "original": "LinkedInLearning - Leadership Foundations - Project Management Institute, Inc.pdf",
+    "priority": 35
+  },
+  {
+    "id": 37,
+    "title": "Skills to Build Stronger Work Relationships",
+    "issuer": "LinkedIn Learning",
+    "category": "business",
+    "kind": "PMI credit record",
+    "file": "certificates/certificate-37.pdf",
+    "original": "LinkedInLearning - Skills to Build Stronger Work Relationships - Project Management Institute, Inc.pdf",
+    "priority": 36
+  },
+  {
+    "id": 21,
+    "title": "Advanced Content Marketing",
+    "issuer": "LinkedIn Learning",
+    "category": "creative",
+    "kind": "PMI credit record",
+    "file": "certificates/certificate-21.pdf",
+    "original": "LinkedInLearning - Advanced Content Marketing - Project Management Institute, Inc.pdf",
+    "priority": 37
+  },
+  {
+    "id": 25,
+    "title": "Efficient Time Management ",
+    "issuer": "LinkedIn Learning",
+    "category": "business",
+    "kind": "PMI credit record",
+    "file": "certificates/certificate-25.pdf",
+    "original": "LinkedInLearning - Efficient Time Management  - Project Management Institute, Inc.pdf",
+    "priority": 38
   }
 ]

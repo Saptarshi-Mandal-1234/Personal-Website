@@ -524,3 +524,17 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
   document.getElementById('certificateControls').hidden = false;
   render();
 })();
+
+(() => {
+ const controls = document.getElementById('skillControls');
+ if (!controls) return;
+ const cards = [...document.querySelectorAll('[data-skill-roles]')];
+ const buttons = [...controls.querySelectorAll('[data-skill-filter]')];
+ controls.hidden = false;
+ buttons.forEach(button => button.addEventListener('click', () => {
+   const role = button.dataset.skillFilter;
+   buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+   cards.forEach(card => {card.hidden = role !== 'all' && !card.dataset.skillRoles.split(' ').includes(role);});
+   document.getElementById('skillStatus').textContent = `${cards.filter(card => !card.hidden).length} skill areas · ${button.textContent} · Expand a card to explore the evidence.`;
+ }));
+})();

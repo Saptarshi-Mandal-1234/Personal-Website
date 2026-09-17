@@ -1426,3 +1426,16 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
 @media(max-width:1050px){.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.certificate-grid{grid-template-columns:1fr}.cert-preview img{height:200px}.cert-body{padding:18px}}
 @media(prefers-reduced-motion:reduce){.cert-preview img{transition:none;transform:none!important}}
+
+/* Role-based skills and keyboard/touch-friendly evidence panels. */
+.skill-controls{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.skill-controls[hidden]{display:none}
+.skill-filter{font:inherit;cursor:pointer;min-height:44px;padding:10px 16px;border:1px solid var(--border-color);border-radius:24px;background:var(--card-bg);color:var(--text-main)}
+.skill-filter[aria-pressed="true"]{background:var(--lime);color:#08150d}
+.skill-card[hidden]{display:none}
+.skill-evidence{margin-top:24px;border-top:1px solid var(--border-color);padding-top:10px}
+.skill-evidence summary{cursor:pointer;min-height:44px;padding:12px 0;font-weight:600}
+.skill-evidence p{font-size:14px;line-height:1.7;margin:12px 0}
+.skill-evidence a{display:inline-block;min-height:44px;padding:10px 0;color:var(--text-main);text-underline-offset:4px}
+.hero-socials{display:flex;flex-wrap:wrap;gap:8px 24px;margin:20px 0}
+.hero-socials a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-underline-offset:5px;font-size:14px;font-weight:600}
