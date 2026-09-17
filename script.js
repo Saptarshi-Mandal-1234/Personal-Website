@@ -487,3 +487,40 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
   });
   resize();sync();
 })();
+
+// Search and progressively reveal certificate documents without hiding them when JS is unavailable.
+(() => {
+  const gallery = document.getElementById('certifications');
+  if (!gallery) return;
+  const cards = [...gallery.querySelectorAll('.certificate-card')];
+  const search = document.getElementById('certificateSearch');
+  const more = document.getElementById('certificateMore');
+  const buttons = [...gallery.querySelectorAll('[data-cert-filter]')];
+  let category = 'all';
+  let limit = 6;
+  function render() {
+    const query = search.value.trim().toLocaleLowerCase();
+    const matches = cards.filter(card => (category === 'all' || card.dataset.certCategory === category) && card.textContent.toLocaleLowerCase().includes(query));
+    cards.forEach(card => { card.hidden = true; });
+    matches.slice(0, limit).forEach(card => { card.hidden = false; });
+    document.getElementById('certificateStatus').textContent = `Showing ${Math.min(limit, matches.length)} of ${matches.length} matching documents · ${cards.length} total`;
+    document.getElementById('certificateEmpty').hidden = matches.length > 0;
+    more.hidden = matches.length <= limit;
+  }
+  buttons.forEach(button => button.addEventListener('click', () => {
+    category = button.dataset.certFilter;
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    limit = 6;
+    render();
+  }));
+  search.addEventListener('input', () => { limit = 6; render(); });
+  more.addEventListener('click', () => {
+    const previous = cards.filter(card => !card.hidden);
+    limit += 6;
+    render();
+    const next = cards.find(card => !card.hidden && !previous.includes(card));
+    if (next) next.querySelector('a').focus({preventScroll:true});
+  });
+  document.getElementById('certificateControls').hidden = false;
+  render();
+})();
