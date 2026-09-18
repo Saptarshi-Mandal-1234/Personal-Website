@@ -12,3 +12,18 @@
 @media(prefers-reduced-motion:reduce){.cf-card{transition:none}.cf-ambience{display:none}}
 
 .linear-carousel{width:100%;min-width:0;padding:22px 0!important}.linear-track{display:flex;gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--lime-accent) var(--card-bg);padding:8px 4px 20px;cursor:grab;touch-action:pan-x pan-y}.linear-track:active{cursor:grabbing}.linear-slide{flex:0 0 320px;min-width:0}.linear-card{display:flex;flex-direction:column;height:100%;border:1px solid var(--border-color);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--text-main);background:var(--card-bg);box-shadow:var(--card-shadow)}.linear-image{display:block;width:100%;height:235px;object-fit:contain;background:#f5f5f5;padding:10px;transition:filter .25s}.linear-loading{filter:blur(3px)}.linear-card-copy{padding:22px;display:flex;flex-direction:column;flex:1}.linear-card-copy h3{font-size:21px;line-height:1.35;margin:12px 0}.linear-card-description{font-size:14px;line-height:1.6;color:var(--text-muted);margin-bottom:20px}.linear-open{display:flex;align-items:center;gap:8px;min-height:44px;color:var(--text-main);font-weight:700;font-size:14px;margin-top:auto}.linear-card:hover{border-color:var(--card-hover-border)}.linear-card:focus-visible{outline:3px solid var(--lime-accent);outline-offset:2px}.linear-controls{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:16px}.linear-controls button{min-width:46px;min-height:46px;display:grid;place-items:center;border:1px solid var(--border-color);border-radius:50%;background:var(--card-bg);color:var(--text-main);cursor:pointer}.linear-controls button:disabled{opacity:.35;cursor:default}.linear-controls p{font-size:14px;color:var(--text-muted);text-align:center}@media(max-width:600px){.linear-slide{flex-basis:min(290px,calc(100vw - 76px))}.linear-image{height:215px}.linear-controls{gap:12px}}@media(prefers-reduced-motion:reduce){.linear-image{transition:none}}
+
+/* Obsidian Atelier carousel treatment */
+.coverflow{border-color:var(--glass-border);background:linear-gradient(145deg,rgba(10,10,10,.92),rgba(24,24,25,.8));box-shadow:0 24px 70px #0007,inset 0 1px 0 #fff1;backdrop-filter:blur(18px)}
+.cf-label{color:var(--gold-bright)}
+.cf-card{background:#121213;border-color:#5e5f61;border-radius:22px;box-shadow:0 18px 46px #000a}
+.cf-active{border-color:var(--gold);box-shadow:0 22px 56px #000c,0 0 34px #d7b65f24}
+.cf-content{background:linear-gradient(180deg,#0000 30%,#111113df 62%,#111113 78%)}
+.cf-tag{color:var(--gold-bright);background:#111113e8;border:1px solid #d7b65f55}
+.cf-cta{background:linear-gradient(135deg,#f1d98f,#b98425);color:#17120a;box-shadow:0 10px 28px #b9842538}
+.cf-controls button,.cf-dots button{border-color:#68696d;background:#151516;color:#fff}
+.cf-dots [aria-pressed=true] span{background:var(--gold-bright)}
+.linear-track{scrollbar-color:var(--gold) transparent}
+.linear-card{background:var(--glass);border-color:var(--glass-border);backdrop-filter:blur(18px);box-shadow:var(--card-shadow)}
+.linear-card:hover{border-color:var(--gold);box-shadow:var(--card-hover-shadow);transform:translateY(-5px)}
+.linear-controls button{background:var(--glass);border-color:var(--glass-border);backdrop-filter:blur(12px)}

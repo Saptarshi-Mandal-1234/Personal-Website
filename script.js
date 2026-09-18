@@ -425,16 +425,16 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
     if (!enabled || document.hidden || !visible()) return;
     if (time-last > 55) {
       last = time;
-      ctx.fillStyle = 'rgba(3,12,8,.16)'; ctx.fillRect(0,0,width,height);
+      ctx.fillStyle = 'rgba(5,5,5,.18)'; ctx.fillRect(0,0,width,height);
       ctx.font = '15px monospace';
       drops.forEach((y,i)=>{
-        ctx.fillStyle = i%5 === 0 ? '#a9ffd1' : '#14c96b';
+        ctx.fillStyle = i%5 === 0 ? '#f5e3a4' : '#9da3aa';
         ctx.fillText(glyphs[Math.floor(Math.random()*glyphs.length)],i*24,y*24);
         drops[i] = y*24>height && Math.random()>.97 ? 0 : y+.45;
       });
       if(pulse && time-pulse.time < 600) {
         const age=(time-pulse.time)/600;
-        ctx.strokeStyle=`rgba(103,255,160,${(1-age)*.5})`;ctx.lineWidth=2;
+        ctx.strokeStyle=`rgba(222,190,105,${(1-age)*.55})`;ctx.lineWidth=2;
         ctx.beginPath();ctx.arc(pulse.x,pulse.y,20+age*90,0,Math.PI*2);ctx.stroke();
       }
     }
