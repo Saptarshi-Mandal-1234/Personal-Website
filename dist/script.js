@@ -260,18 +260,7 @@ const projectData = {
     "link": "https://github.com/Saptarshi-Mandal-1234/Customer-Churn-Analysis",
     "linkLabel": "View repository"
   },
-  "project_606": {
-    "category": "SOFTWARE & AI",
-    "title": "MediAssist AI",
-    "lead": "A healthcare assistant built at a hackathon.",
-    "desc": "Built a healthcare assistant with four consultation modes, Gemini API-driven interactions and a MongoDB / Node.js backend, complete with deployment artifacts.",
-    "tags": [
-      "Gemini API",
-      "MongoDB",
-      "Node.js / Express"
-    ],
-    "link": "https://github.com/Saptarshi-Mandal-1234"
-  }
+  "project_606": {"category": "SOFTWARE & AI", "title": "MediAssist AI", "lead": "Health conversations and tracking in one prototype.", "desc": "Four Gemini-powered chat modes cover symptoms, medications, mental wellness and lab-report discussion. The Node.js/Express backend includes MongoDB models for chat, appointments, medications, mood, health logs and vitals, plus symptom-reference matching. Source reviewed; live AI and database behavior not validated in this portfolio update.", "tags": ["Gemini API", "MongoDB", "Node.js / Express", "Docker"], "link": "https://github.com/Saptarshi-Mandal-1234/MediAssist-Chatbot", "linkLabel": "View repository"}
 };
 
 const projectDialog = document.getElementById('projectDialog');
