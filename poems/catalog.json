@@ -1,0 +1,80 @@
+[
+  {
+    "id": "poem-01",
+    "title": "That night was my sunshine",
+    "language": "en",
+    "file": "poems/poem-01.mp4"
+  },
+  {
+    "id": "poem-02",
+    "title": "What I feel!!!",
+    "language": "en",
+    "file": "poems/poem-02.mp4"
+  },
+  {
+    "id": "poem-03",
+    "title": "The sea soothes my soul",
+    "language": "en",
+    "file": "poems/poem-03.mp4"
+  },
+  {
+    "id": "poem-04",
+    "title": "LOVE .. WHAT??",
+    "language": "en",
+    "file": "poems/poem-04.mp4"
+  },
+  {
+    "id": "poem-05",
+    "title": "Suffering??",
+    "language": "en",
+    "file": "poems/poem-05.mp4"
+  },
+  {
+    "id": "poem-06",
+    "title": "RAIN",
+    "language": "en",
+    "file": "poems/poem-06.mp4"
+  },
+  {
+    "id": "poem-07",
+    "title": "BEING LOVESICK",
+    "language": "en",
+    "file": "poems/poem-07.mp4"
+  },
+  {
+    "id": "poem-08",
+    "title": "FLOWERS THAT ONCE BLOOMED",
+    "language": "en",
+    "file": "poems/poem-08.mp4"
+  },
+  {
+    "id": "poem-09",
+    "title": "Solitary",
+    "language": "en",
+    "file": "poems/poem-09.mp4"
+  },
+  {
+    "id": "poem-10",
+    "title": "বাবা",
+    "language": "bn",
+    "file": "poems/poem-10.mp4"
+  },
+  {
+    "id": "poem-11",
+    "title": "I am a son",
+    "language": "en",
+    "file": "poems/poem-11.mp4"
+  },
+  {
+    "id": "poem-12",
+    "title": "মা",
+    "language": "bn",
+    "file": "poems/poem-12.mp4"
+  },
+  {
+    "id": "poem-13",
+    "title": "কালো-সাদা ছবির মতো",
+    "language": "bn",
+    "file": "poems/poem-13.png"
+  }
+]
