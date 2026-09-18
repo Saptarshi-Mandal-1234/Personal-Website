@@ -237,16 +237,16 @@ const projectData = {
   "project_404": {
     "category": "CONNECTED SYSTEMS",
     "title": "Automated Irrigation System",
-    "lead": "Sensor data that drives action.",
-    "desc": "Built a sensor-driven pipeline monitoring real-time soil moisture to automate water distribution, reducing manual intervention by 40%.",
+    "lead": "Crop-aware watering. Sensor-driven control.",
+    "desc": "An ESP32 prototype that uses soil moisture and crop-specific thresholds to control a pump, with pH monitoring and a Bluetooth-linked web dashboard. Includes browser simulations; real-hardware validation is pending. The firmware implements hysteresis to reduce pump switching, manual commands and runtime/fault checks. Sensor calibration and end-to-end pump testing remain outstanding.",
     "tags": [
-      "Python",
-      "Arduino / Raspberry Pi",
-      "Sensors"
+        "C++ / Arduino",
+        "ESP32 / BLE",
+        "Web Bluetooth"
     ],
     "link": "https://github.com/Saptarshi-Mandal-1234/Automated-Irrigation-System",
     "linkLabel": "View repository"
-  },
+},
   "project_505": {
     "category": "DATA ANALYTICS",
     "title": "Customer Churn Analysis",
