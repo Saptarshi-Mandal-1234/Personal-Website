@@ -1534,3 +1534,21 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
 #techCertificateFilters[hidden]{display:none}
 .certificate-groups{padding-bottom:16px;border-bottom:1px solid var(--border-color)}
 .certificate-groups .cert-filter{font-weight:700}
+
+/* Beyond the Code: quiet editorial space, extensible to other creative collections. */
+.beyond-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.beyond-intro{color:var(--text-muted);max-width:46ch;line-height:1.8;margin:24px 0 30px}
+.poetry-cover{display:flex;flex-direction:column;justify-content:space-between;gap:45px;padding:36px;border:1px solid var(--border-color);border-radius:16px;background:var(--card-bg);color:var(--text-main);text-decoration:none;box-shadow:8px 8px 0 var(--border-color)}
+.poetry-cover-top,.poetry-cover-bottom{font-size:12px;letter-spacing:.08em;color:var(--text-muted)}
+.poetry-cover-title{font-family:Georgia,serif;font-size:clamp(46px,6vw,76px);font-weight:400;line-height:1.1;letter-spacing:-.04em}
+.poetry-cover-title>span,.poetry-dot{color:var(--lime-accent)}
+.poetry-cover:hover,.poetry-cover:focus-visible{border-color:var(--card-hover-border)}
+.poetry-cover-bottom{display:flex;justify-content:space-between;gap:12px}
+.poetry-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px;padding-bottom:28px}
+.poetry-main{max-width:900px;padding-top:70px;padding-bottom:100px;min-height:75vh}
+.poetry-main h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(64px,12vw,132px);line-height:1.03;letter-spacing:-.055em;margin:24px 0}
+.poetry-deck{max-width:40ch;font-size:20px;line-height:1.8;color:var(--text-muted)}
+.poetry-rule{height:1px;background:var(--border-color);margin:56px 0 0}
+.poetry-empty{padding:40px 0!important}.poetry-empty h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(26px,4vw,38px)}
+.poetry-empty p{color:var(--text-muted);line-height:1.8;margin:20px 0 28px}
+@media(max-width:760px){.beyond-grid{grid-template-columns:1fr;gap:32px}.poetry-cover{padding:26px;margin-right:8px}.poetry-top{flex-wrap:wrap}.poetry-main{padding-top:35px}}
