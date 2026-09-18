@@ -1530,3 +1530,7 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
 .case-figure{margin:32px 0}.case-figure img{width:100%;height:auto;background:white;border-radius:10px}.case-figure figcaption{font-size:14px;line-height:1.6;color:var(--text-muted);margin-top:10px}
 .case-sections section{padding:24px 0;border-top:1px solid var(--border-color)}.case-sections h2{font-size:25px;margin:0 0 12px}.case-sections p{font-size:17px;line-height:1.8;max-width:78ch}
 @media(prefers-reduced-motion:reduce){.cert-pill{transition:none!important}.cert-pill:hover{transform:none}}
+
+#techCertificateFilters[hidden]{display:none}
+.certificate-groups{padding-bottom:16px;border-bottom:1px solid var(--border-color)}
+.certificate-groups .cert-filter{font-weight:700}

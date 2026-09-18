@@ -488,13 +488,15 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
   const more = document.getElementById('certificateMore');
   const buttons = [...gallery.querySelectorAll('[data-cert-filter]')];
   let category = 'all';
+  let group = 'tech';
+  const groupButtons = [...gallery.querySelectorAll('[data-cert-group-filter]')];
   let limit = 6;
   function render() {
     const query = search.value.trim().toLocaleLowerCase();
-    const matches = cards.filter(card => (category === 'all' || card.dataset.certCategory === category) && card.textContent.toLocaleLowerCase().includes(query));
+    const matches = cards.filter(card => card.dataset.certGroup === group && (category === 'all' || card.dataset.certCategory === category) && card.textContent.toLocaleLowerCase().includes(query));
     cards.forEach(card => { card.hidden = true; });
     matches.slice(0, limit).forEach(card => { card.hidden = false; });
-    document.getElementById('certificateStatus').textContent = `Showing ${Math.min(limit, matches.length)} of ${matches.length} matching documents · ${cards.length} total`;
+    document.getElementById('certificateStatus').textContent = `Showing ${Math.min(limit, matches.length)} of ${matches.length} matching documents · ${cards.filter(card => card.dataset.certGroup === group).length} in ${group === 'tech' ? 'Tech' : group.toUpperCase()} · ${cards.length} total`;
     document.getElementById('certificateEmpty').hidden = matches.length > 0;
     more.hidden = matches.length <= limit;
   }
@@ -502,6 +504,14 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
     category = button.dataset.certFilter;
     buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     limit = 6;
+    render();
+  }));
+  groupButtons.forEach(button => button.addEventListener('click', () => {
+    group = button.dataset.certGroupFilter;
+    groupButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    category = 'all'; search.value = ''; limit = 6;
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item.dataset.certFilter === 'all')));
+    document.getElementById('techCertificateFilters').hidden = group !== 'tech';
     render();
   }));
   search.addEventListener('input', () => { limit = 6; render(); });

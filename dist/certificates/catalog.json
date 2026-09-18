@@ -7,7 +7,8 @@
     "kind": "Academic internship",
     "file": "certificates/certificate-18.pdf",
     "original": "IBM SKILLBUILD.pdf",
-    "priority": 1
+    "priority": 1,
+    "group": "tech"
   },
   {
     "id": 16,
@@ -17,7 +18,8 @@
     "kind": "Job simulation",
     "file": "certificates/certificate-16.pdf",
     "original": "Forage - PwC Switzerland Power BI Job Simulation.pdf",
-    "priority": 2
+    "priority": 2,
+    "group": "tech"
   },
   {
     "id": 17,
@@ -27,7 +29,8 @@
     "kind": "Job simulation",
     "file": "certificates/certificate-17.pdf",
     "original": "Forage - TATA GenAI Powered Data Analytics Job Simulation.pdf",
-    "priority": 3
+    "priority": 3,
+    "group": "tech"
   },
   {
     "id": 20,
@@ -37,7 +40,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-20.pdf",
     "original": "Introduction to SQL - SimpliLearn.pdf",
-    "priority": 4
+    "priority": 4,
+    "group": "tech"
   },
   {
     "id": 15,
@@ -47,7 +51,8 @@
     "kind": "Job simulation",
     "file": "certificates/certificate-15.pdf",
     "original": "Forage - JPMorgan Chase & Co. Excel Skills Job Simulation.pdf",
-    "priority": 5
+    "priority": 5,
+    "group": "tech"
   },
   {
     "id": 34,
@@ -57,7 +62,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-34.pdf",
     "original": "LinkedInLearning - Learning Data Analytics 1 Foundations.pdf",
-    "priority": 6
+    "priority": 6,
+    "group": "tech"
   },
   {
     "id": 29,
@@ -67,7 +73,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-29.pdf",
     "original": "LinkedInLearning - Excel Essential Training Microsoft 365.pdf",
-    "priority": 7
+    "priority": 7,
+    "group": "tech"
   },
   {
     "id": 23,
@@ -77,7 +84,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-23.pdf",
     "original": "LinkedInLearning - Business Analysis Foundations.pdf",
-    "priority": 8
+    "priority": 8,
+    "group": "tech"
   },
   {
     "id": 24,
@@ -87,7 +95,8 @@
     "kind": "Learning path",
     "file": "certificates/certificate-24.pdf",
     "original": "LinkedInLearning - CertificateOfCompletion_Career Essentials in Generative AI - Microsoft.pdf",
-    "priority": 9
+    "priority": 9,
+    "group": "tech"
   },
   {
     "id": 6,
@@ -97,7 +106,8 @@
     "kind": "Guided project",
     "file": "certificates/certificate-06.pdf",
     "original": "Coursera - Build a computer vision app with Azure Cognitive Services - Microsoft.pdf",
-    "priority": 10
+    "priority": 10,
+    "group": "tech"
   },
   {
     "id": 30,
@@ -107,7 +117,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-30.pdf",
     "original": "LinkedInLearning - Google Cloud Foundations.pdf",
-    "priority": 11
+    "priority": 11,
+    "group": "tech"
   },
   {
     "id": 33,
@@ -117,7 +128,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-33.pdf",
     "original": "LinkedInLearning - Learning AI with GitHub Copilot.pdf",
-    "priority": 12
+    "priority": 12,
+    "group": "tech"
   },
   {
     "id": 12,
@@ -127,7 +139,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-12.pdf",
     "original": "Coursera - Introduction to Generative AI - Google.pdf",
-    "priority": 13
+    "priority": 13,
+    "group": "tech"
   },
   {
     "id": 9,
@@ -137,7 +150,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-09.pdf",
     "original": "Coursera - Generative AI Essentials Overview and Impact - University of Michigan.pdf",
-    "priority": 14
+    "priority": 14,
+    "group": "tech"
   },
   {
     "id": 19,
@@ -147,7 +161,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-19.pdf",
     "original": "Introduction to Software Architecture -SimpliLearn.pdf",
-    "priority": 15
+    "priority": 15,
+    "group": "tech"
   },
   {
     "id": 5,
@@ -157,7 +172,8 @@
     "kind": "Specialization",
     "file": "certificates/certificate-05.pdf",
     "original": "Coursera - Applied Cryptography - University of Colorado Systems.pdf",
-    "priority": 16
+    "priority": 16,
+    "group": "tech"
   },
   {
     "id": 3,
@@ -167,7 +183,8 @@
     "kind": "Learning path",
     "file": "certificates/certificate-03.pdf",
     "original": "CertificateOfCompletion_Cisco Network Security Safeguarding Network Integrity and Data.pdf",
-    "priority": 17
+    "priority": 17,
+    "group": "tech"
   },
   {
     "id": 8,
@@ -177,7 +194,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-08.pdf",
     "original": "Coursera - Cyber Security Fundementals - University of London.pdf",
-    "priority": 18
+    "priority": 18,
+    "group": "tech"
   },
   {
     "id": 4,
@@ -187,7 +205,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-04.pdf",
     "original": "Coursera - Advanced System Security Topics - University of Colorado System.pdf",
-    "priority": 19
+    "priority": 19,
+    "group": "tech"
   },
   {
     "id": 11,
@@ -197,7 +216,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-11.pdf",
     "original": "Coursera - INFORMATION THEORY -The Chinese University of Hong Kong.pdf",
-    "priority": 20
+    "priority": 20,
+    "group": "tech"
   },
   {
     "id": 2,
@@ -207,7 +227,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-02.pdf",
     "original": "AI Product Management Course - SimpliLearn.pdf",
-    "priority": 21
+    "priority": 21,
+    "group": "tech"
   },
   {
     "id": 1,
@@ -217,7 +238,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-01.pdf",
     "original": "Agile Project Management - HP Life.pdf",
-    "priority": 22
+    "priority": 22,
+    "group": "tech"
   },
   {
     "id": 35,
@@ -227,7 +249,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-35.pdf",
     "original": "LinkedInLearning - Learning MATLAB.pdf",
-    "priority": 23
+    "priority": 23,
+    "group": "tech"
   },
   {
     "id": 32,
@@ -237,7 +260,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-32.pdf",
     "original": "LinkedInLearning - Leadership Foundations.pdf",
-    "priority": 24
+    "priority": 24,
+    "group": "tech"
   },
   {
     "id": 38,
@@ -247,7 +271,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-38.pdf",
     "original": "LinkedInLearning - Skills to Build Stronger Work Relationships.pdf",
-    "priority": 25
+    "priority": 25,
+    "group": "tech"
   },
   {
     "id": 22,
@@ -257,7 +282,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-22.pdf",
     "original": "LinkedInLearning - Advanced Content Marketing.pdf",
-    "priority": 26
+    "priority": 26,
+    "group": "tech"
   },
   {
     "id": 36,
@@ -267,7 +293,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-36.pdf",
     "original": "LinkedInLearning - Photoshop 2024 New AI Features.pdf",
-    "priority": 27
+    "priority": 27,
+    "group": "tech"
   },
   {
     "id": 27,
@@ -277,7 +304,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-27.pdf",
     "original": "LinkedInLearning - Electronics Foundations Basic Circuits.pdf",
-    "priority": 28
+    "priority": 28,
+    "group": "tech"
   },
   {
     "id": 26,
@@ -287,7 +315,8 @@
     "kind": "Course completion",
     "file": "certificates/certificate-26.pdf",
     "original": "LinkedInLearning - Efficient Time Management.pdf",
-    "priority": 29
+    "priority": 29,
+    "group": "tech"
   },
   {
     "id": 7,
@@ -297,7 +326,8 @@
     "kind": "Guided project",
     "file": "certificates/certificate-07.pdf",
     "original": "Coursera - Create a Project Charter with Google Docs.pdf",
-    "priority": 30
+    "priority": 30,
+    "group": "tech"
   },
   {
     "id": 14,
@@ -307,7 +337,8 @@
     "kind": "Guided project",
     "file": "certificates/certificate-14.pdf",
     "original": "Coursera - Use Canva to Design Digital Course Collateral.pdf",
-    "priority": 31
+    "priority": 31,
+    "group": "tech"
   },
   {
     "id": 13,
@@ -317,7 +348,8 @@
     "kind": "Guided project",
     "file": "certificates/certificate-13.pdf",
     "original": "Coursera - Search Engine Optimization (SEO) with Squarespace.pdf",
-    "priority": 32
+    "priority": 32,
+    "group": "tech"
   },
   {
     "id": 10,
@@ -327,7 +359,8 @@
     "kind": "Guided project",
     "file": "certificates/certificate-10.pdf",
     "original": "Coursera - Google Ads for Beginners.pdf",
-    "priority": 33
+    "priority": 33,
+    "group": "tech"
   },
   {
     "id": 28,
@@ -337,7 +370,8 @@
     "kind": "NASBA CPE record",
     "file": "certificates/certificate-28.pdf",
     "original": "LinkedInLearning - Excel Essential Training Microsoft 365 - NASBA.pdf",
-    "priority": 34
+    "priority": 34,
+    "group": "tech"
   },
   {
     "id": 31,
@@ -347,7 +381,8 @@
     "kind": "PMI credit record",
     "file": "certificates/certificate-31.pdf",
     "original": "LinkedInLearning - Leadership Foundations - Project Management Institute, Inc.pdf",
-    "priority": 35
+    "priority": 35,
+    "group": "tech"
   },
   {
     "id": 37,
@@ -357,7 +392,8 @@
     "kind": "PMI credit record",
     "file": "certificates/certificate-37.pdf",
     "original": "LinkedInLearning - Skills to Build Stronger Work Relationships - Project Management Institute, Inc.pdf",
-    "priority": 36
+    "priority": 36,
+    "group": "tech"
   },
   {
     "id": 21,
@@ -367,7 +403,8 @@
     "kind": "PMI credit record",
     "file": "certificates/certificate-21.pdf",
     "original": "LinkedInLearning - Advanced Content Marketing - Project Management Institute, Inc.pdf",
-    "priority": 37
+    "priority": 37,
+    "group": "tech"
   },
   {
     "id": 25,
@@ -377,6 +414,247 @@
     "kind": "PMI credit record",
     "file": "certificates/certificate-25.pdf",
     "original": "LinkedInLearning - Efficient Time Management  - Project Management Institute, Inc.pdf",
-    "priority": 38
+    "priority": 38,
+    "group": "tech"
+  },
+  {
+    "id": "uem-01",
+    "title": "Ecstasia 2025",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Coordinator appreciation",
+    "file": "certificates/uem-01.png",
+    "original": "UEM/32.png"
+  },
+  {
+    "id": "uem-02",
+    "title": "Ureckon 2025",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Coordinator appreciation",
+    "file": "certificates/uem-02.png",
+    "original": "UEM/45.png-1.png"
+  },
+  {
+    "id": "uem-03",
+    "title": "Nanotechnology: A Changing Face in Modern Era",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Poster competition participation",
+    "file": "certificates/uem-03.png",
+    "original": "UEM/99-1.png"
+  },
+  {
+    "id": "uem-04",
+    "title": "Aperture 2.0",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Photography event organizing",
+    "file": "certificates/uem-04.png",
+    "original": "UEM/apperture.png"
+  },
+  {
+    "id": "uem-05",
+    "title": "Reaching Out NGO community service",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Appreciation",
+    "file": "certificates/uem-05.png",
+    "original": "UEM/outreach.png"
+  },
+  {
+    "id": "uem-06",
+    "title": "Energy and Sustainability: A Social Mission",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Seminar participation",
+    "file": "certificates/uem-06.png",
+    "original": "UEM/Saptarshi Mandal.png"
+  },
+  {
+    "id": "uem-07",
+    "title": "Internet of Things workshop",
+    "issuer": "UEM Kolkata",
+    "category": "activities",
+    "group": "uem",
+    "kind": "Workshop participation",
+    "file": "certificates/uem-07.png",
+    "original": "UEM/WhatsApp Image 2024-04-20 at 00.31.25_3281f1f4-1.png"
+  },
+  {
+    "id": "iitm-01",
+    "title": "GenAI: Common use cases and solutions",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Workshop participation",
+    "file": "certificates/iitm-01.png",
+    "original": "IITM/GenAI - Common use cases and solutions-1.png"
+  },
+  {
+    "id": "iitm-02",
+    "title": "Paradox 2024: Student Relations",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Volunteer recognition",
+    "file": "certificates/iitm-02.png",
+    "original": "IITM/PRDX24P0024-1.png"
+  },
+  {
+    "id": "iitm-03",
+    "title": "Paradox 2024: Squid Games",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Event volunteer appreciation",
+    "file": "certificates/iitm-03.png",
+    "original": "IITM/PRDX24P0387-1.png"
+  },
+  {
+    "id": "iitm-04",
+    "title": "Paradox 2024: Qutopia",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-04.png",
+    "original": "IITM/PRDX24P0993-1.png"
+  },
+  {
+    "id": "iitm-05",
+    "title": "Paradox 2024: Shutter Safari",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-05.png",
+    "original": "IITM/PRDX24P1487-1.png"
+  },
+  {
+    "id": "iitm-06",
+    "title": "Paradox 2024: What’s in a Meme",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-06.png",
+    "original": "IITM/PRDX24P1821-1.png"
+  },
+  {
+    "id": "iitm-07",
+    "title": "Paradox 2024: Fiction Flicks",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-07.png",
+    "original": "IITM/PRDX24P2640-1.png"
+  },
+  {
+    "id": "iitm-08",
+    "title": "Paradox 2024: Logic Loom 2.0",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-08.png",
+    "original": "IITM/PRDX24P3370-1.png"
+  },
+  {
+    "id": "iitm-09",
+    "title": "Paradox 2024: Kampus Run",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-09.png",
+    "original": "IITM/PRDX24P3741-1.png"
+  },
+  {
+    "id": "iitm-10",
+    "title": "Paradox 2024: Squid Game",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Participation",
+    "file": "certificates/iitm-10.png",
+    "original": "IITM/PRDX24P4829-1.png"
+  },
+  {
+    "id": "iitm-11",
+    "title": "Paradox in Margazhi 2025: Student Relations",
+    "issuer": "IIT Madras · Paradox",
+    "category": "activities",
+    "group": "iitm",
+    "kind": "Coordinator recognition",
+    "file": "certificates/iitm-11.png",
+    "original": "IITM/PRDX25M05155-1.png"
+  },
+  {
+    "id": "atl-01",
+    "title": "ATL Marathon 2021–22: Savvys",
+    "issuer": "Atal Innovation Mission · ATL Marathon",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Team participation",
+    "file": "certificates/atl-01.png",
+    "original": "ATL/BarnikRay_ATL_Marathon_2021_22___Participation_certificate-1.png"
+  },
+  {
+    "id": "atl-03",
+    "title": "Student Innovator Program SIP 4.0",
+    "issuer": "AIC-MIT ADT · Devise Electronics · Makers Lab",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Eight-week program completion",
+    "file": "certificates/atl-03.png",
+    "original": "ATL/Certificate of Completetion_Spatrshi Mandal-1.png"
+  },
+  {
+    "id": "atl-04",
+    "title": "ATL Marathon 2021–22: Top 350 Teams",
+    "issuer": "Atal Innovation Mission · ATL Marathon",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Team achievement",
+    "file": "certificates/atl-04.png",
+    "original": "ATL/Saptarshi_mandal_ATL_Marathon_2021_22___Top_350_Teams_certificate-1.png"
+  },
+  {
+    "id": "atl-05",
+    "title": "ATL Marathon 2020: Team X B",
+    "issuer": "Atal Innovation Mission · ATL Marathon",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Team participation",
+    "file": "certificates/atl-05.png",
+    "original": "ATL/Team_X_B_ATL_Marathon_2020___Participation_certificate-1.png"
+  },
+  {
+    "id": "atl-06",
+    "title": "ATL Marathon 2020: Top 10 in West Bengal",
+    "issuer": "Atal Innovation Mission · ATL Marathon",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Team achievement",
+    "file": "certificates/atl-06.png",
+    "original": "ATL/Team_X_B_ATL_Marathon_2020___Top_10_Teams_of_your_state_certificate-1.png"
+  },
+  {
+    "id": "atl-07",
+    "title": "ATL Marathon 2020: Top 300 Teams",
+    "issuer": "Atal Innovation Mission · ATL Marathon",
+    "category": "activities",
+    "group": "atl",
+    "kind": "Team achievement",
+    "file": "certificates/atl-07.png",
+    "original": "ATL/Team_X_B_ATL_Marathon_2020___Top_300_Teams_certificate-1.png"
   }
 ]
