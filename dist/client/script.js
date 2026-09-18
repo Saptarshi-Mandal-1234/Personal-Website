@@ -191,7 +191,7 @@ filterButtons.forEach((btn) => {
 /* ==========================================================================
    5. Accessible Project Detail Dialog (Factual Content Only)
    ========================================================================== */
-const projectData = {
+const projectData = window.cmsProjectData || {
  "project_808": {"category": "DATA ENGINEERING & ML", "title": "MarketPulse AI Foundation", "lead": "Market research built to be reproducible.", "desc": "A Python research pipeline for NIFTY 50 and ten liquid Indian stocks, with session-aware data validation, 39 technical features, PostgreSQL storage, chronological model evaluation, risk/anomaly analysis and seven-page Power BI report generation. Project documentation reports that tested ML candidates did not outperform selected simple baselines.", "tags": ["Python", "PostgreSQL", "Power BI", "Scikit-learn"], "link": "https://github.com/Saptarshi-Mandal-1234/MarketPulse--Ai", "linkLabel": "View repository"},
   "project_707": {"category": "SOFTWARE & AI", "title": "AI HR Workspace", "lead": "From HR questions to structured action plans.", "desc": "A Gemini-powered HR workspace with eight specialty modes, a Node.js backend, and a browser interface. Supports drafting and structured HR workflows. This is a local prototype; AI output needs human review and production authentication, storage and privacy work remain.", "tags": ["Node.js", "JavaScript", "Gemini API"], "link": "case-studies/ai-hr.html", "linkLabel": "Read project overview"},
   "project_101": {
