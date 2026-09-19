@@ -1621,3 +1621,26 @@ section{position:relative;border-color:var(--glass-border);padding:108px 0}secti
 @media(max-width:700px){section{padding:76px 0}.card,.project-card,.skill-card{border-radius:18px}.about-copy{padding:22px}.contact-links{padding:5px 18px}.hero::after{right:-190px}.nav-links{background:var(--glass-strong);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid var(--glass-border);border-radius:18px;box-shadow:var(--card-shadow)}}
 @media(prefers-reduced-motion:reduce){.hero::after,[data-effects="on"] .focus-panel{animation:none}.project-card::after,.skill-card::after,.focus-panel::after{display:none}.project-preview img{transition:none}.js [data-reveal]{filter:none}}
 
+/* Beyond the Code — photography collection */
+.photography-section{margin-top:72px;padding-top:56px;border-top:1px solid var(--glass-border)}
+.photography-head{display:grid;grid-template-columns:1.2fr .8fr;align-items:end;gap:48px;margin-bottom:28px}
+.photography-head h3{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-.05em;margin:14px 0 0;font-weight:560}
+.photography-head>p{color:var(--text-muted);margin:0;max-width:420px}
+.photography-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;grid-template-rows:320px;gap:16px}
+.photo-placeholder,.photo-card{position:relative;min-width:0;overflow:hidden;border:1px solid var(--glass-border);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(120,120,125,.035));box-shadow:var(--card-shadow)}
+.photo-placeholder{display:grid;place-items:center;color:var(--silver-bright)}
+.photo-placeholder::before,.photo-card::before{content:'';position:absolute;inset:12px;border:1px solid rgba(215,182,95,.18);border-radius:14px;pointer-events:none}
+.photo-placeholder>span:not(.viewfinder){font:600 13px/1 'Cascadia Code',Consolas,monospace;color:var(--gold);letter-spacing:.14em}
+.photo-placeholder-main{display:flex;flex-direction:column;gap:8px;text-align:center;background:radial-gradient(circle at 50% 45%,rgba(215,182,95,.13),transparent 28%),linear-gradient(135deg,rgba(255,255,255,.08),rgba(90,90,95,.035))}
+.photo-placeholder-main strong{font-size:clamp(1.4rem,3vw,2.35rem);font-weight:560;letter-spacing:-.035em;color:var(--text-main)}
+.photo-placeholder-main small{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted)}
+.viewfinder{width:54px;height:54px;border:1px solid var(--gold);border-radius:50%;margin-bottom:10px;box-shadow:0 0 30px var(--gold-soft);position:relative}
+.viewfinder::before,.viewfinder::after{content:'';position:absolute;background:var(--gold);opacity:.7}.viewfinder::before{width:74px;height:1px;left:-11px;top:26px}.viewfinder::after{height:74px;width:1px;top:-11px;left:26px}
+.photo-card{display:flex;flex-direction:column;background:var(--glass);backdrop-filter:blur(16px);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.photo-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:var(--card-hover-shadow)}
+.photo-card>a{display:block;min-height:0;flex:1;overflow:hidden}.photo-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}.photo-card:hover img{transform:scale(1.035)}
+.photo-card figcaption{padding:18px 20px}.photo-card figcaption span{font-size:18px;font-weight:650}.photo-card figcaption p{margin:5px 0 0;color:var(--text-muted);font-size:14px}
+@media(max-width:800px){.photography-head{grid-template-columns:1fr;gap:16px}.photography-grid{grid-template-columns:1.4fr 1fr;grid-template-rows:280px 180px}.photo-placeholder-main{grid-row:1 / span 2}.photo-placeholder:last-child{grid-column:2}}
+@media(max-width:560px){.photography-section{margin-top:48px;padding-top:42px}.photography-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 130px}.photo-placeholder-main{grid-column:1 / -1;grid-row:auto}.photo-placeholder{border-radius:18px}.photo-card{grid-column:1 / -1;min-height:320px}}
+@media(prefers-reduced-motion:reduce){.photo-card,.photo-card img{transition:none}.photo-card:hover{transform:none}.photo-card:hover img{transform:none}}
+
