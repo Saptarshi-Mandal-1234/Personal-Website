@@ -11,7 +11,7 @@ const themeMeta = document.querySelector('meta[name="theme-color"]');
 const THEME_STORAGE_KEY = 'portfolio-theme-pref';
 
 function getPreferredTheme() {
-  return 'light';
+  return 'dark';
 }
 
 function applyTheme(theme, save = false) {

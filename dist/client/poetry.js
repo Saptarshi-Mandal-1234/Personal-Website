@@ -1,6 +1,6 @@
 (() => {
 const button = document.getElementById('readingTheme');
-let theme = 'light';
+let theme = 'dark';
 function apply() { document.documentElement.dataset.theme = theme; button.hidden = true; }
 apply();
 })();
