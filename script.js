@@ -11,28 +11,7 @@ const themeMeta = document.querySelector('meta[name="theme-color"]');
 const THEME_STORAGE_KEY = 'portfolio-theme-pref';
 
 function getPreferredTheme() {
-  if (document.body.classList.contains('poetry-page')) {
-    return document.documentElement.dataset.theme || 'dark';
-  }
-  let saved = null;
-  try {
-    saved = localStorage.getItem(THEME_STORAGE_KEY);
-  } catch (e) {
-    // Storage access unavailable (e.g. private mode / sandboxed environment)
-    saved = null;
-  }
-
-  if (saved === 'dark' || saved === 'light') {
-    return saved;
-  }
-
-  try {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
-  } catch (e) {
-    return 'light';
-  }
+  return 'light';
 }
 
 function applyTheme(theme, save = false) {
@@ -72,23 +51,6 @@ if (themeToggle) {
 }
 
 // Sync with system theme changes when user has not set an explicit override
-if (window.matchMedia) {
-  try {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      let saved = null;
-      try {
-        saved = localStorage.getItem(THEME_STORAGE_KEY);
-      } catch (err) {
-        saved = null;
-      }
-      if (!saved) {
-        applyTheme(e.matches ? 'dark' : 'light', false);
-      }
-    });
-  } catch (e) {
-    // Ignore matchMedia listener failure
-  }
-}
 
 /* ==========================================================================
    2. Mobile Menu Navigation (Preserved Selenium & Touch Interactions)

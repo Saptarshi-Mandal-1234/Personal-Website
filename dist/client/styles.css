@@ -1562,6 +1562,7 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
    Obsidian Atelier — black, silver, white and gold visual system
    ========================================================================== */
 :root{
+  font-family:'calluna',Calluna,Georgia,serif;
   --gold:#9a6b13;--gold-bright:#bd8a22;--gold-soft:rgba(154,107,19,.14);
   --silver:#68707a;--silver-bright:#939aa3;
   --glass:rgba(255,255,255,.68);--glass-strong:rgba(255,255,255,.84);--glass-border:rgba(80,80,80,.22);
@@ -1574,6 +1575,7 @@ button,a{touch-action:manipulation}.filter-btn,.theme-toggle,.menu-toggle{min-he
   --dialog-bg:rgba(246,245,241,.93);--dialog-backdrop:rgba(0,0,0,.72);
   --lime:#d2aa48;--lime-dark:#7c5409;--lime-accent:var(--gold);--lime-glow:rgba(210,170,72,.25);--matrix-green:#d8b760;--matrix-glow:rgba(216,183,96,.22);
 }
+body,button,input,select,textarea{font-family:'calluna',Calluna,Georgia,serif}
 [data-theme="dark"]{
   --gold:#d7b65f;--gold-bright:#f0d486;--gold-soft:rgba(215,182,95,.14);--silver:#92979e;--silver-bright:#c9cdd2;
   --glass:rgba(19,19,20,.64);--glass-strong:rgba(22,22,23,.86);--glass-border:rgba(220,220,220,.14);
@@ -1623,6 +1625,9 @@ section{position:relative;border-color:var(--glass-border);padding:108px 0}secti
 @media(max-width:1000px){.hero{min-height:auto}.hero h1{font-size:clamp(3rem,9vw,5.4rem)}.about-copy{padding:26px}.hero::after{width:280px;height:280px;opacity:.7}}
 @media(max-width:700px){section{padding:76px 0}.card,.project-card,.skill-card{border-radius:18px}.about-copy{padding:22px}.contact-links{padding:5px 18px}.hero::after{right:-190px}.hero-grid>div:first-child{padding:10px 0}.hero-grid>div:first-child::before{inset:-16px -12px;border-radius:22px}.nav-links{background:var(--glass-strong);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid var(--glass-border);border-radius:18px;box-shadow:var(--card-shadow)}}
 @media(prefers-reduced-motion:reduce){body::after,.hero::after,[data-effects="on"] .focus-panel{animation:none}.project-card::after,.skill-card::after,.focus-panel::after{display:none}.project-preview img{transition:none}.js [data-reveal]{filter:none}}
+
+/* Permanent light presentation. */
+html[data-theme="light"] .hero,html[data-theme="light"] #contact{color:#171717}html[data-theme="light"] .hero::before{background:linear-gradient(115deg,rgba(248,247,242,.9),rgba(248,247,242,.62))}html[data-theme="light"] .hero h1,html[data-theme="light"] .hero-intro,html[data-theme="light"] .hero-socials a,html[data-theme="light"] .panel-bottom,html[data-theme="light"] .hero-bottom{color:#282828}html[data-theme="light"] .focus-panel{background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,255,255,.38));border-color:rgba(70,70,70,.22)}html[data-theme="light"] .focus-row{border-color:rgba(70,70,70,.18)}html[data-theme="light"] .focus-row h2{color:#222}html[data-theme="light"] #contact{background:linear-gradient(130deg,rgba(245,244,240,.9),rgba(228,225,217,.84))}html[data-theme="light"] .contact-links{background:rgba(255,255,255,.55);border-color:rgba(70,70,70,.16)}.matrix-canvas{display:none!important}
 
 /* Beyond the Code — photography collection */
 .photography-section{margin-top:72px;padding-top:56px;border-top:1px solid var(--glass-border)}

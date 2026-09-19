@@ -1,22 +1,7 @@
-// Reuse the shared ambient effects on this standalone creative page.
-(() => {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'matrixCanvas';
-  canvas.className = 'matrix-canvas';
-  canvas.setAttribute('aria-hidden', 'true');
-  document.body.prepend(canvas);
-  const sharedEffects = document.createElement('script');
-  sharedEffects.src = 'script.js';
-  sharedEffects.defer = true;
-  document.head.append(sharedEffects);
-})();
-
 (() => {
 const button = document.getElementById('readingTheme');
-let theme = 'dark';
-try { theme = localStorage.getItem('poetry-theme') || 'dark'; } catch {}
-function apply() { document.documentElement.dataset.theme = theme; button.textContent = theme === 'dark' ? 'Light reading mode' : 'Dark reading mode'; button.setAttribute('aria-pressed', String(theme === 'light')); }
-button.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; apply(); try { localStorage.setItem('poetry-theme', theme); } catch {} });
+let theme = 'light';
+function apply() { document.documentElement.dataset.theme = theme; button.hidden = true; }
 apply();
 })();
 (() => {
