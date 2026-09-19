@@ -11,6 +11,9 @@ const themeMeta = document.querySelector('meta[name="theme-color"]');
 const THEME_STORAGE_KEY = 'portfolio-theme-pref';
 
 function getPreferredTheme() {
+  if (document.body.classList.contains('poetry-page')) {
+    return document.documentElement.dataset.theme || 'dark';
+  }
   let saved = null;
   try {
     saved = localStorage.getItem(THEME_STORAGE_KEY);
@@ -410,8 +413,8 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
   const glyphs = '01アイウエオカキクケコサシスセソ<>/{}';
   const cards = [...document.querySelectorAll('.project-card,.skill-card,.focus-panel')];
   const hero = document.getElementById('top');
-  if (!ctx || !toggle) return;
-  toggle.hidden = false;
+  if (!ctx) return;
+  if (toggle) toggle.hidden = false;
   function resize() {
     width = innerWidth; height = Math.min(innerHeight, 1000);
     const scale = Math.min(devicePixelRatio || 1, 1.5);
@@ -419,7 +422,7 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
     ctx.setTransform(scale, 0, 0, scale, 0, 0);
     drops = Array.from({length:Math.ceil(width / 24)},()=>Math.random() * height / 24);
   }
-  function visible() { return hero.getBoundingClientRect().bottom > 0; }
+  function visible() { return true; }
   function draw(time) {
     frame = 0;
     if (!enabled || document.hidden || !visible()) return;
@@ -443,21 +446,22 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
   function sync() {
     cancelAnimationFrame(frame); frame=0;
     document.documentElement.dataset.effects = enabled ? 'on' : 'off';
-    toggle.textContent = enabled ? 'Effects on' : 'Effects off';
-    toggle.setAttribute('aria-pressed',String(enabled));
-    toggle.disabled=motion.matches;
-    toggle.title=motion.matches ? 'Animations disabled by your reduced-motion preference' : 'Toggle visual effects';
+    if (toggle) {
+      toggle.textContent = enabled ? 'Effects on' : 'Effects off';
+      toggle.setAttribute('aria-pressed',String(enabled));
+      toggle.disabled=motion.matches;
+      toggle.title=motion.matches ? 'Animations disabled by your reduced-motion preference' : 'Toggle visual effects';
+    }
     if(enabled && !document.hidden && visible()) frame=requestAnimationFrame(draw);
     else { ctx.clearRect(0,0,width,height); cards.forEach(reset); }
   }
   function reset(card) {card.style.removeProperty('transform');card.style.removeProperty('--pointer-x');card.style.removeProperty('--pointer-y');}
-  toggle.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem('portfolio-effects',enabled?'on':'off')}catch{}sync()});
+  if (toggle) toggle.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem('portfolio-effects',enabled?'on':'off')}catch{}sync()});
   motion.addEventListener('change',()=>{enabled=!motion.matches;try{enabled=enabled&&localStorage.getItem('portfolio-effects')!=='off'}catch{}sync()});
   document.addEventListener('visibilitychange',sync);
-  new IntersectionObserver(sync).observe(hero);
   let resizeTimer;
   window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{resize();sync()},150)},{passive:true});
-  hero.addEventListener('pointerdown',e=>{if(enabled)pulse={x:e.clientX,y:e.clientY,time:performance.now()}},{passive:true});
+  document.addEventListener('pointerdown',e=>{if(enabled)pulse={x:e.clientX,y:e.clientY,time:performance.now()}},{passive:true});
   cards.forEach(card=>{
     card.addEventListener('pointermove',e=>{
       if(!enabled || e.pointerType!=='mouse')return;
@@ -477,6 +481,33 @@ if (copyEmail && navigator.clipboard && window.isSecureContext) {
     },{passive:true});
   });
   resize();sync();
+})();
+
+/* Desktop cursor: a restrained gold focus ring with a trailing silver core. */
+(() => {
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!finePointer.matches || reduced.matches) return;
+  const ring = document.createElement('span');
+  const core = document.createElement('span');
+  ring.className = 'cursor-orb'; core.className = 'cursor-core';
+  ring.setAttribute('aria-hidden', 'true'); core.setAttribute('aria-hidden', 'true');
+  document.body.append(ring, core);
+  let targetX = -100, targetY = -100, ringX = -100, ringY = -100, active = false;
+  const interactive = 'a,button,input,select,textarea,summary,[data-scramble]';
+  function render() {
+    ringX += (targetX - ringX) * .16; ringY += (targetY - ringY) * .16;
+    ring.style.transform = `translate3d(${ringX}px,${ringY}px,0)`;
+    requestAnimationFrame(render);
+  }
+  document.addEventListener('pointermove', event => {
+    targetX = event.clientX; targetY = event.clientY;
+    core.style.transform = `translate3d(${targetX}px,${targetY}px,0)`;
+    if (!active) { active = true; document.documentElement.classList.add('custom-cursor-ready'); }
+  }, {passive:true});
+  document.addEventListener('pointerover', event => document.documentElement.classList.toggle('cursor-over-control', Boolean(event.target.closest(interactive))), {passive:true});
+  document.addEventListener('pointerout', event => { if (!event.relatedTarget) document.documentElement.classList.remove('cursor-over-control'); }, {passive:true});
+  render();
 })();
 
 // Search and progressively reveal certificate documents without hiding them when JS is unavailable.

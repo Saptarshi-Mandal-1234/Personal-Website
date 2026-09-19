@@ -1,3 +1,16 @@
+// Reuse the shared ambient effects on this standalone creative page.
+(() => {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'matrixCanvas';
+  canvas.className = 'matrix-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
+  document.body.prepend(canvas);
+  const sharedEffects = document.createElement('script');
+  sharedEffects.src = 'script.js';
+  sharedEffects.defer = true;
+  document.head.append(sharedEffects);
+})();
+
 (() => {
 const button = document.getElementById('readingTheme');
 let theme = 'dark';
