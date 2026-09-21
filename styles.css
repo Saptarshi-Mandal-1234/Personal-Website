@@ -728,6 +728,8 @@ section {
   color: var(--lime-dark);
 }
 
+.project-repositories { display: flex; flex-wrap: wrap; gap: 12px 18px; }
+
 [data-theme="dark"] .project-links a:hover {
   color: var(--lime);
 }

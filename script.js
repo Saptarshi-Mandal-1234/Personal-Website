@@ -196,8 +196,8 @@ const projectData = window.cmsProjectData || {
       "IPFS",
       "Blockchain"
     ],
-    "link": "https://github.com/Saptarshi-Mandal-1234/MediVault-Decentralized-Medical-Records-System",
-    "linkLabel": "View repository"
+    "link": "https://github.com/Saptarshi-Mandal-1234/MediVault-Frontend",
+    "linkLabel": "View frontend"
   },
   "project_404": {
     "category": "CONNECTED SYSTEMS",
