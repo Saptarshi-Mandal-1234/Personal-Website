@@ -151,6 +151,25 @@
     "revision": 0
   },
   {
+    "kind": "projects",
+    "id": "project_909",
+    "data": {
+      "title": "AI Procurement Cost-Savings Advisor",
+      "category": "data-ml",
+      "lead": "Turn procurement data into decisions.",
+      "description": "A Streamlit decision dashboard that turns supplier and spend data into executive KPIs, cost-saving opportunities, supplier-risk analysis and practical procurement recommendations. It uses rule-based fallbacks when no AI key is configured.",
+      "tags": "Python, Streamlit, Pandas, Plotly, OpenAI API",
+      "image": "assets/projects/procurement-advisor.svg",
+      "link": "https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor",
+      "caseUrl": "",
+      "html": "<article class=\"card project-card\" id=\"project_909\" data-category=\"data-ml\" data-reveal><a class=\"project-preview\" href=\"https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor\" target=\"_blank\" rel=\"noopener noreferrer\"><img loading=\"lazy\" src=\"assets/projects/procurement-advisor.svg\" alt=\"AI Procurement Cost-Savings Advisor executive dashboard preview\"></a><div class=\"project-meta\"><span>DATA ANALYTICS &amp; AI</span><span>09 /</span></div><h3>AI Procurement Cost-Savings Advisor</h3><p class=\"project-lead\">Turn procurement data into decisions.</p><p class=\"muted\">A Streamlit decision dashboard that turns supplier and spend data into executive KPIs, cost-saving opportunities, supplier-risk analysis and practical procurement recommendations. It uses rule-based fallbacks when no AI key is configured.</p><dl class=\"project-highlights\"><div><dt>procurement orders</dt><dd>2,000</dd></div><div><dt>potential savings</dt><dd>$131.7k</dd></div></dl><div class=\"tag-list\"><span class=\"tag\">Python</span><span class=\"tag\">Streamlit</span><span class=\"tag\">Pandas</span><span class=\"tag\">Plotly</span></div><div class=\"card-actions\"><button type=\"button\" class=\"btn-details\" data-project=\"project_909\" aria-haspopup=\"dialog\">Explore project <span aria-hidden=\"true\">→</span></button></div><div class=\"project-links\"><a href=\"https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor\" target=\"_blank\" rel=\"noopener noreferrer\">View repository <span aria-hidden=\"true\">↗</span></a></div></article>",
+      "caseText": "Built from the supplied procurement, supplier and product data. Metrics are project calculations for decision support and are not financial guarantees."
+    },
+    "position": 8,
+    "hidden": false,
+    "revision": 0
+  },
+  {
     "kind": "skills",
     "id": "skill-0",
     "data": {
