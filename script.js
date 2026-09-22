@@ -159,6 +159,7 @@ filterButtons.forEach((btn) => {
    ========================================================================== */
 // Keep the project view current with new public repositories on GitHub.
 const githubProfile = 'Saptarshi-Mandal-1234';
+const githubExcludedRepositories = new Set(['saptarshi-mandal-1234']);
 const githubSyncStatus = document.getElementById('githubSyncStatus');
 const githubCacheKey = `portfolio-github-repos-${githubProfile}`;
 const githubCacheTtl = 15 * 60 * 1000;
@@ -217,7 +218,7 @@ async function loadGitHubProjects() {
       sessionStorage.setItem(githubCacheKey, JSON.stringify({ savedAt: Date.now(), repositories }));
     }
     const existingLinks = new Set([...grid.querySelectorAll('a[href*="github.com/"]')].map((existingLink) => existingLink.href.replace(/\/$/, '').toLowerCase()));
-    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
+    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase())).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
     additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));
     const filterStatus = document.getElementById('filterStatus');
     if (filterStatus) filterStatus.textContent = `Showing all ${getProjectCards().length} projects`;
@@ -232,7 +233,7 @@ loadGitHubProjects();
 const projectData = window.cmsProjectData || {
  "project_909": {"category": "DATA ANALYTICS & AI", "title": "AI Procurement Cost-Savings Advisor", "lead": "Turn procurement data into decisions.", "desc": "A three-page Streamlit procurement dashboard built on 2,000 supplied purchase orders. It surfaces spend, delivery performance, supplier risk, renegotiation opportunities and vendor-consolidation scenarios. The dashboard can generate optional AI narratives, with rule-based fallbacks available without an API key. The displayed $131.7k potential-savings estimate is a modelled opportunity from the supplied dataset, not a guaranteed financial result.", "tags": ["Python", "Streamlit", "Pandas", "Plotly", "OpenAI API"], "link": "https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor", "linkLabel": "View repository"},
  "project_808": {"category": "DATA ENGINEERING & ML", "title": "MarketPulse AI Foundation", "lead": "Market research built to be reproducible.", "desc": "A Python research pipeline for NIFTY 50 and ten liquid Indian stocks, with session-aware data validation, 39 technical features, PostgreSQL storage, chronological model evaluation, risk/anomaly analysis and seven-page Power BI report generation. Project documentation reports that tested ML candidates did not outperform selected simple baselines.", "tags": ["Python", "PostgreSQL", "Power BI", "Scikit-learn"], "link": "https://github.com/Saptarshi-Mandal-1234/MarketPulse--Ai", "linkLabel": "View repository"},
-  "project_707": {"category": "SOFTWARE & AI", "title": "AI HR Workspace", "lead": "From HR questions to structured action plans.", "desc": "A Gemini-powered HR workspace with eight specialty modes, a Node.js backend, and a browser interface. Supports drafting and structured HR workflows. This is a local prototype; AI output needs human review and production authentication, storage and privacy work remain.", "tags": ["Node.js", "JavaScript", "Gemini API"], "link": "case-studies/ai-hr.html", "linkLabel": "Read project overview"},
+  "project_707": {"category": "SOFTWARE & AI", "title": "AI HR Workspace", "lead": "From HR questions to structured action plans.", "desc": "A Gemini-powered HR workspace with eight specialty modes, a Node.js backend, and a browser interface. Supports drafting and structured HR workflows. This is a local prototype; AI output needs human review and production authentication, storage and privacy work remain.", "tags": ["Node.js", "JavaScript", "Gemini API"], "link": "https://github.com/Saptarshi-Mandal-1234/Ai-HR", "linkLabel": "View repository"},
   "project_101": {
     "category": "DATA ANALYTICS",
     "title": "HR Employee Attrition Analysis",
