@@ -1693,5 +1693,24 @@
       "text": "Let’s make\nsomething useful.",
       "html": "Let’s make<br>something <em>useful.</em>"
     }
+  },
+  {
+    "kind": "projects",
+    "id": "project_1010",
+    "data": {
+      "title": "Selenium E-Commerce Automation",
+      "category": "software-iot",
+      "lead": "A purchase flow tested with evidence at every step.",
+      "description": "A Python and Selenium automation script for a public e-commerce test site. It loads test data from JSON, uses explicit waits, handles popups, verifies the cart and generates a linked HTML execution report with real screenshots.",
+      "tags": "Python, Selenium, ChromeDriver, webdriver-manager, JSON",
+      "image": "assets/projects/selenium-search.png",
+      "link": "https://github.com/Saptarshi-Mandal-1234/selenium-ecommerce-automation-project-WIPRO",
+      "caseUrl": "case-studies/selenium-ecommerce.html",
+      "html": "<article class=\"card project-card\" id=\"project_1010\" data-category=\"software-iot\" data-reveal><a class=\"project-preview\" href=\"case-studies/selenium-ecommerce.html\"><img loading=\"lazy\" src=\"assets/projects/selenium-search.png\" alt=\"Selenium automation screenshot showing product search results on AutomationExercise\"></a><div class=\"project-meta\"><span>QA AUTOMATION</span><span>10 /</span></div><h3>Selenium E-Commerce Automation</h3><p class=\"project-lead\">A purchase flow tested with evidence at every step.</p><p class=\"muted\">A Python and Selenium automation script for a public e-commerce test site. It loads test data from JSON, uses explicit waits, handles popups, verifies the cart and generates a linked HTML execution report with real screenshots.</p><dl class=\"project-highlights\"><div><dt>verified checks</dt><dd>6 pass</dd></div><div><dt>latest run</dt><dd>65.8s</dd></div></dl><div class=\"tag-list\"><span class=\"tag\">Python</span><span class=\"tag\">Selenium</span><span class=\"tag\">ChromeDriver</span><span class=\"tag\">JSON</span></div><div class=\"card-actions\"><a class=\"btn-details\" href=\"case-studies/selenium-ecommerce.html\">View test evidence →</a><button type=\"button\" class=\"btn-details\" data-project=\"project_1010\" aria-haspopup=\"dialog\">Quick details →</button></div><div class=\"project-links\"><a href=\"https://github.com/Saptarshi-Mandal-1234/selenium-ecommerce-automation-project-WIPRO\" target=\"_blank\" rel=\"noopener noreferrer\">View repository <span aria-hidden=\"true\">↗</span></a></div></article>",
+      "caseText": "The assignment\n\nAutomate a realistic e-commerce flow while demonstrating browser setup, login handling, product search, cart interaction, test-data loading, popup handling, screenshots and reporting.\n\nImplementation\n\nThe Python script reads configuration from data/test_data.json and uses Selenium WebDriver, webdriver-manager and explicit waits. A TestReport class records each step with a timestamp, status, message and screenshot link, then renders a standalone HTML report.\n\nLatest run\n\nThe saved 22 September 2026 report completed in 65.82 seconds: six PASS checks, zero FAIL checks, one SKIP and three informational entries. Searching “Top” returned 14 results; the script added Blue Top and verified its product, price, quantity and total in the cart.\n\nExpected exceptions\n\nPlaceholder credentials were rejected by the public demo site, so login was recorded as SKIP and the guest checkout flow continued. The cart quantity was not editable after addition on this site, which the script records as INFO rather than a false failure.\n\nEvidence\n\nThe project includes timestamped browser screenshots and the generated execution report. It has not been converted into a multi-test Page Object Model or CI test suite yet."
+    },
+    "position": 9,
+    "hidden": false,
+    "revision": 0
   }
 ]
