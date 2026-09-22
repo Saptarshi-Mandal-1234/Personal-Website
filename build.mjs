@@ -1,6 +1,6 @@
 import fs from 'node:fs';import path from 'node:path';import {build} from 'esbuild';import {execFileSync} from 'node:child_process';
 fs.mkdirSync('dist/client',{recursive:true});
-for(const item of ['styles.css','script.js','poetry.js','admin.js','admin.css','assets','certificates','poems','Saptarshi_Mandal_DataAnalyst_Resume.pdf'])if(fs.existsSync(item))fs.cpSync(item,path.join('dist/client',item),{recursive:true});
+for(const item of ['styles.css','script.js','poetry.js','admin.js','admin.css','resume-live.html','resume-live.css','resume-live.js','assets','certificates','poems','Saptarshi_Mandal_DataAnalyst_Resume.pdf'])if(fs.existsSync(item))fs.cpSync(item,path.join('dist/client',item),{recursive:true});
 await build({entryPoints:['frontend/carousels.tsx'],bundle:true,minify:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/client/carousels.js'});
 execFileSync(process.execPath,['node_modules/@tailwindcss/cli/dist/index.mjs','-i','frontend/carousel.css','-o','dist/client/carousels.css','--minify'],{stdio:'inherit'});
 const templates={home:fs.readFileSync('index.html','utf8'),poetry:fs.readFileSync('poetry.html','utf8'),admin:fs.readFileSync('admin.html','utf8'),cases:Object.fromEntries(fs.readdirSync('case-studies').filter(f=>f.endsWith('.html')).map(f=>['/case-studies/'+f,fs.readFileSync('case-studies/'+f,'utf8')]))};

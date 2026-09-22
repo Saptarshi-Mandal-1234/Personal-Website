@@ -217,6 +217,12 @@ async function loadGitHubProjects() {
       repositories = await response.json();
       sessionStorage.setItem(githubCacheKey, JSON.stringify({ savedAt: Date.now(), repositories }));
     }
+    const githubSkillSnapshot = document.getElementById('githubSkillSnapshot');
+    const repositoryLanguages = [...new Set(repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase())).map((repo) => repo.language).filter(Boolean))].sort();
+    if (githubSkillSnapshot) {
+      githubSkillSnapshot.hidden = false;
+      githubSkillSnapshot.innerHTML = `<strong>Live GitHub technology snapshot</strong><span>${repositoryLanguages.length ? repositoryLanguages.join(' · ') : 'No primary languages reported yet.'}</span><a href="resume-live.html" target="_blank" rel="noopener">Generate live resume →</a>`;
+    }
     const existingLinks = new Set([...grid.querySelectorAll('a[href*="github.com/"]')].map((existingLink) => existingLink.href.replace(/\/$/, '').toLowerCase()));
     const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase())).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
     additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));

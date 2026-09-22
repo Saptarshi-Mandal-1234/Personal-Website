@@ -43,7 +43,8 @@
       <p class="hero-role">DATA ANALYST / BUSINESS ANALYST / SOFTWARE</p>
       <div class="actions">
         <a id="viewProjectsBtn" class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-        <a id="downloadResume" class="text-link" href="Saptarshi_Mandal_DataAnalyst_Resume.pdf" download>Download resume (PDF) <span aria-hidden="true">↓</span></a>
+        <a id="downloadResume" class="text-link" href="resume-live.html" target="_blank" rel="noopener">Generate live resume (PDF) <span aria-hidden="true">↓</span></a>
+        <a class="text-link resume-fallback" href="Saptarshi_Mandal_DataAnalyst_Resume.pdf" download>Download saved resume <span aria-hidden="true">↓</span></a>
       </div>
     </div>
     <aside class="focus-panel" aria-label="Areas of focus" data-reveal>
@@ -220,6 +221,7 @@
         <button class="skill-filter" type="button" data-skill-filter="business" aria-pressed="false">Business &amp; communication</button>
       </div>
       <p id="skillStatus" class="muted" role="status" aria-live="polite">8 skill areas · Click connected certificates or expand evidence to verify.</p>
+      <aside id="githubSkillSnapshot" class="github-skill-snapshot" aria-live="polite" hidden></aside>
       <div class="grid" id="skillsGrid">
         <article class="card skill-card" data-skill-roles="data business">
           <span class="skill-number">01 /</span>
