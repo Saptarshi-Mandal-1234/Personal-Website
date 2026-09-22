@@ -124,11 +124,12 @@ if ('IntersectionObserver' in window && sectionElements.length > 0) {
    4. Interactive Project Filters (Preserves Total Count in DOM for Selenium)
    ========================================================================== */
 const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const getProjectCards = () => [...document.querySelectorAll('.project-card')];
 
 filterButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
     const targetFilter = btn.dataset.filter;
+    const projectCards = getProjectCards();
 
     // Update button states
     filterButtons.forEach((b) => {
@@ -156,6 +157,78 @@ filterButtons.forEach((btn) => {
 /* ==========================================================================
    5. Accessible Project Detail Dialog (Factual Content Only)
    ========================================================================== */
+// Keep the project view current with new public repositories on GitHub.
+const githubProfile = 'Saptarshi-Mandal-1234';
+const githubSyncStatus = document.getElementById('githubSyncStatus');
+const githubCacheKey = `portfolio-github-repos-${githubProfile}`;
+const githubCacheTtl = 15 * 60 * 1000;
+
+function repositoryTitle(name) {
+  return name.replace(/^[-_]+/, '').replace(/[-_]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+function githubProjectCard(repo) {
+  const card = document.createElement('article');
+  card.className = 'card project-card github-project-card';
+  card.id = `github-${repo.name.toLowerCase().replace(/[^a-z0-9_-]/g, '-')}`;
+  card.dataset.category = 'github';
+  card.dataset.reveal = '';
+  const meta = document.createElement('div');
+  meta.className = 'project-meta';
+  meta.innerHTML = '<span>GITHUB / LIVE SYNC</span><span>NEW /</span>';
+  const title = document.createElement('h3');
+  title.textContent = repositoryTitle(repo.name);
+  const lead = document.createElement('p');
+  lead.className = 'project-lead';
+  lead.textContent = repo.language ? `${repo.language} repository` : 'Public GitHub repository';
+  const description = document.createElement('p');
+  description.className = 'muted';
+  description.textContent = repo.description || 'A newly published public repository. Open it on GitHub for source and setup details.';
+  const tags = document.createElement('div');
+  tags.className = 'tag-list';
+  [repo.language, repo.license?.spdx_id && repo.license.spdx_id !== 'NOASSERTION' ? repo.license.spdx_id : null].filter(Boolean).forEach((tagText) => {
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = tagText;
+    tags.appendChild(tag);
+  });
+  const links = document.createElement('div');
+  links.className = 'project-links';
+  const link = document.createElement('a');
+  link.href = repo.html_url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.textContent = 'Open repository ↗';
+  links.appendChild(link);
+  card.append(meta, title, lead, description, tags, links);
+  return card;
+}
+
+async function loadGitHubProjects() {
+  const grid = document.querySelector('.project-grid');
+  if (!grid) return;
+  try {
+    const cached = JSON.parse(sessionStorage.getItem(githubCacheKey) || 'null');
+    let repositories = cached?.savedAt && Date.now() - cached.savedAt < githubCacheTtl ? cached.repositories : null;
+    if (!repositories) {
+      const response = await fetch(`https://api.github.com/users/${githubProfile}/repos?sort=updated&per_page=100`, { headers: { Accept: 'application/vnd.github+json' } });
+      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+      repositories = await response.json();
+      sessionStorage.setItem(githubCacheKey, JSON.stringify({ savedAt: Date.now(), repositories }));
+    }
+    const existingLinks = new Set([...grid.querySelectorAll('a[href*="github.com/"]')].map((existingLink) => existingLink.href.replace(/\/$/, '').toLowerCase()));
+    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
+    additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));
+    const filterStatus = document.getElementById('filterStatus');
+    if (filterStatus) filterStatus.textContent = `Showing all ${getProjectCards().length} projects`;
+    if (githubSyncStatus) githubSyncStatus.textContent = additions.length ? `GitHub sync added ${additions.length} public ${additions.length === 1 ? 'repository' : 'repositories'} to this view.` : 'GitHub is synced — every current public repository is already featured here.';
+  } catch {
+    if (githubSyncStatus) githubSyncStatus.textContent = 'GitHub projects could not be refreshed right now. Your curated projects are still available.';
+  }
+}
+
+loadGitHubProjects();
+
 const projectData = window.cmsProjectData || {
  "project_909": {"category": "DATA ANALYTICS & AI", "title": "AI Procurement Cost-Savings Advisor", "lead": "Turn procurement data into decisions.", "desc": "A three-page Streamlit procurement dashboard built on 2,000 supplied purchase orders. It surfaces spend, delivery performance, supplier risk, renegotiation opportunities and vendor-consolidation scenarios. The dashboard can generate optional AI narratives, with rule-based fallbacks available without an API key. The displayed $131.7k potential-savings estimate is a modelled opportunity from the supplied dataset, not a guaranteed financial result.", "tags": ["Python", "Streamlit", "Pandas", "Plotly", "OpenAI API"], "link": "https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor", "linkLabel": "View repository"},
  "project_808": {"category": "DATA ENGINEERING & ML", "title": "MarketPulse AI Foundation", "lead": "Market research built to be reproducible.", "desc": "A Python research pipeline for NIFTY 50 and ten liquid Indian stocks, with session-aware data validation, 39 technical features, PostgreSQL storage, chronological model evaluation, risk/anomaly analysis and seven-page Power BI report generation. Project documentation reports that tested ML candidates did not outperform selected simple baselines.", "tags": ["Python", "PostgreSQL", "Power BI", "Scikit-learn"], "link": "https://github.com/Saptarshi-Mandal-1234/MarketPulse--Ai", "linkLabel": "View repository"},
