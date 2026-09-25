@@ -1,0 +1,86 @@
+{
+  "updated": "2026-09-25T12:56:36.745Z",
+  "repositories": [
+    {
+      "repo": "WIPRO_COE_CLASS",
+      "commit": "fc5e207f816588bca4153b2ad29972ca414c9d23",
+      "discovered": [
+        "capstone_project/screenshots/01_home_20260923_172817.png",
+        "capstone_project/screenshots/04_added_to_cart_20260923_172912.png",
+        "capstone_project/screenshots/cart_verified_20260923_173745.png",
+        "capstone_project/screenshots/login_not_confirmed_20260923_173707.png",
+        "capstone_project/screenshots/search_results_20260923_173739.png"
+      ],
+      "gallery": [
+        {
+          "source": "capstone_project/screenshots/01_home_20260923_172817.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO_COE_CLASS/01_home_20260923_172817.png",
+          "sha": "1b3164f2cdfc8f8f99306e7d44aa039d20a65323"
+        },
+        {
+          "source": "capstone_project/screenshots/04_added_to_cart_20260923_172912.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO_COE_CLASS/04_added_to_cart_20260923_172912.png",
+          "sha": "e0cf503a346553c0b20e9aac9e5a5b48088bb75b"
+        },
+        {
+          "source": "capstone_project/screenshots/cart_verified_20260923_173745.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO_COE_CLASS/cart_verified_20260923_173745.png",
+          "sha": "083e395146cfc24a169ce1acd12bc7b0f65b4723"
+        },
+        {
+          "source": "capstone_project/screenshots/login_not_confirmed_20260923_173707.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO_COE_CLASS/login_not_confirmed_20260923_173707.png",
+          "sha": "2613e5290aa39e462e9ba7051348fae6c9a3ef19"
+        },
+        {
+          "source": "capstone_project/screenshots/search_results_20260923_173739.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO_COE_CLASS/search_results_20260923_173739.png",
+          "sha": "b1d511d0b74bd2efa62a99c8c43fe9128af2b4e8"
+        }
+      ]
+    },
+    {
+      "repo": "WIPRO-Selenium-ecommerce-automation-capstone-project",
+      "commit": "04e250d4a5f99c0ffe98c25291825eb23bd4071d",
+      "discovered": [
+        "screenshots/01_home_20260922_155935.png",
+        "screenshots/01_home_20260922_160711.png",
+        "screenshots/02_login_not_confirmed_20260922_155951.png",
+        "screenshots/02_login_not_confirmed_20260922_160723.png",
+        "screenshots/03_search_results_20260922_160019.png",
+        "screenshots/03_search_results_20260922_160755.png",
+        "screenshots/04_added_to_cart_20260922_160020.png",
+        "screenshots/04_added_to_cart_20260922_160756.png",
+        "screenshots/06_cart_verified_20260922_160027.png",
+        "screenshots/06_cart_verified_20260922_160804.png"
+      ],
+      "gallery": [
+        {
+          "source": "screenshots/01_home_20260922_160711.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/01_home_20260922_160711.png",
+          "sha": "05814cc0bf925c3f73d2d4e88ea305dbc58cee9a"
+        },
+        {
+          "source": "screenshots/02_login_not_confirmed_20260922_160723.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/02_login_not_confirmed_20260922_160723.png",
+          "sha": "1a7eaed921785a6de855aad888e4a181ea13f73f"
+        },
+        {
+          "source": "screenshots/03_search_results_20260922_160755.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/03_search_results_20260922_160755.png",
+          "sha": "5f509e1315f3b6e315f7133c8c3965d2efdb6ceb"
+        },
+        {
+          "source": "screenshots/04_added_to_cart_20260922_160756.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/04_added_to_cart_20260922_160756.png",
+          "sha": "0360c51d5a3e63d75b30f2590f016094116d12ec"
+        },
+        {
+          "source": "screenshots/06_cart_verified_20260922_160804.png",
+          "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/06_cart_verified_20260922_160804.png",
+          "sha": "85c3b964b749f5a2a6adaf7a32f11c582da16ee2"
+        }
+      ]
+    }
+  ]
+}
