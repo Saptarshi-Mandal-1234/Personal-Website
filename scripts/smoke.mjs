@@ -5,7 +5,7 @@ for (const page of pages) {
   const response = await fetch(new URL(page, base));
   if (!response.ok || !response.headers.get('content-type')?.includes('text/html')) throw Error(`${page}: ${response.status}`);
   const html = await response.text();
-  if (page === '/' && (!html.includes('ai-hr-three.vercel.app') || !html.includes('mediassist-chatbot.onrender.com'))) throw Error('Live demo links missing');
+  if (page === '/' && (!html.includes('ai-hr-rho-ten.vercel.app') || !html.includes('mediassist-chatbot.onrender.com'))) throw Error('Live demo links missing');
   for (const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/g)) {
     const url = new URL(match[1], new URL(page, base));
     if (url.origin === new URL(base).origin && !url.pathname.startsWith('/signin-')) checked.add(url.pathname);
