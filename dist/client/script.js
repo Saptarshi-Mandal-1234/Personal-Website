@@ -160,6 +160,8 @@ filterButtons.forEach((btn) => {
 // Keep the project view current with new public repositories on GitHub.
 const githubProfile = 'Saptarshi-Mandal-1234';
 const githubExcludedRepositories = new Set(['saptarshi-mandal-1234']);
+// GitHub repository IDs survive renames; this repo already has a curated card.
+const githubCuratedRepositoryIds = new Set([1288206087]);
 const githubSyncStatus = document.getElementById('githubSyncStatus');
 const githubCacheKey = `portfolio-github-repos-${githubProfile}`;
 const githubCacheTtl = 15 * 60 * 1000;
@@ -224,7 +226,7 @@ async function loadGitHubProjects() {
       githubSkillSnapshot.innerHTML = `<strong>Live GitHub technology snapshot</strong><span>${repositoryLanguages.length ? repositoryLanguages.join(' · ') : 'No primary languages reported yet.'}</span><a href="resume-live.html" target="_blank" rel="noopener">Generate live resume →</a>`;
     }
     const existingLinks = new Set([...grid.querySelectorAll('a[href*="github.com/"]')].map((existingLink) => existingLink.href.replace(/\/$/, '').toLowerCase()));
-    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase())).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
+    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase()) && !githubCuratedRepositoryIds.has(repo.id)).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
     additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));
     const filterStatus = document.getElementById('filterStatus');
     if (filterStatus) filterStatus.textContent = `Showing all ${getProjectCards().length} projects`;
@@ -251,7 +253,7 @@ const projectData = window.cmsProjectData || {
       "Power BI (DAX)",
       "Scikit-learn"
     ],
-    "link": "https://github.com/Saptarshi-Mandal-1234/-HR-attrition-analysis",
+    "link": "https://github.com/Saptarshi-Mandal-1234/HR-attrition-analysis",
     "linkLabel": "View repository"
   },
   "project_202": {
