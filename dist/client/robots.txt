@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/admin/
+
+Sitemap: https://iamsapta.saptarshi2005-kgp.chatgpt.site/sitemap.xml
