@@ -165,6 +165,7 @@ const githubCuratedRepositoryIds = new Set([1288206087]);
 const githubSyncStatus = document.getElementById('githubSyncStatus');
 const githubCacheKey = `portfolio-github-repos-${githubProfile}`;
 const githubCacheTtl = 15 * 60 * 1000;
+let githubSyncing = false;
 
 function repositoryTitle(name) {
   return name.replace(/^[-_]+/, '').replace(/[-_]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
@@ -209,7 +210,8 @@ function githubProjectCard(repo) {
 
 async function loadGitHubProjects() {
   const grid = document.querySelector('.project-grid');
-  if (!grid) return;
+  if (!grid || githubSyncing) return;
+  githubSyncing = true;
   try {
     const cached = JSON.parse(sessionStorage.getItem(githubCacheKey) || 'null');
     let repositories = cached?.savedAt && Date.now() - cached.savedAt < githubCacheTtl ? cached.repositories : null;
@@ -230,13 +232,17 @@ async function loadGitHubProjects() {
     additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));
     const filterStatus = document.getElementById('filterStatus');
     if (filterStatus) filterStatus.textContent = `Showing all ${getProjectCards().length} projects`;
-    if (githubSyncStatus) githubSyncStatus.textContent = additions.length ? `GitHub sync added ${additions.length} public ${additions.length === 1 ? 'repository' : 'repositories'} to this view.` : 'GitHub is synced — every current public repository is already featured here.';
+    if (githubSyncStatus) githubSyncStatus.textContent = additions.length ? `GitHub sync added ${additions.length} public ${additions.length === 1 ? 'repository' : 'repositories'} to this view.` : 'GitHub check complete — no new eligible repositories to add.';
   } catch {
     if (githubSyncStatus) githubSyncStatus.textContent = 'GitHub projects could not be refreshed right now. Your curated projects are still available.';
+  } finally {
+    githubSyncing = false;
   }
 }
 
 loadGitHubProjects();
+setInterval(() => { if (!document.hidden) loadGitHubProjects(); }, githubCacheTtl);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) loadGitHubProjects(); });
 
 const projectData = window.cmsProjectData || {
  "project_1010": {"category": "QA AUTOMATION", "title": "Selenium E-Commerce Automation", "lead": "A purchase flow tested with evidence at every step.", "desc": "A Python Selenium capstone that automates a purchase-style flow on AutomationExercise using JSON test data, explicit waits, popup handling and cart-table verification. The latest report recorded six passes, no failures and one expected login skip because placeholder credentials were used. It produces timestamped screenshots and a linked HTML execution report; the cart quantity field is not editable after adding an item on this demo site, so that condition is reported as information.", "tags": ["Python", "Selenium", "ChromeDriver", "webdriver-manager", "JSON"], "link": "https://github.com/Saptarshi-Mandal-1234/WIPRO-Selenium-ecommerce-automation-capstone-project", "linkLabel": "View repository"},
