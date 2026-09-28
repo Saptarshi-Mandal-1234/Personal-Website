@@ -133,6 +133,23 @@
   },
   {
     "kind": "projects",
+    "id": "project_1111",
+    "data": {
+      "title": "AI HR",
+      "category": "software-iot",
+      "lead": "A focused HR copilot prototype.",
+      "description": "The original lightweight demo brings together fictional employee profiles, onboarding packs, review drafts and routine HR assistance with human-review boundaries.",
+      "tags": "JavaScript, Gemini API, Vercel",
+      "image": "assets/projects/ai-hr-workspace.png",
+      "link": "https://github.com/Saptarshi-Mandal-1234/Ai-HR",
+      "caseText": "The original AI HR demo provides a fictional employee directory and profiles, onboarding-pack generation, review drafts and routine HR writing assistance. Gemini requests run server-side. This public demo is not a production HR system: do not enter real employee data, and keep high-impact employment decisions under human review. AI HR 2 is the expanded successor project."
+    },
+    "position": 6.5,
+    "hidden": false,
+    "revision": 0
+  },
+  {
+    "kind": "projects",
     "id": "project_808",
     "data": {
       "title": "MarketPulse AI Foundation",

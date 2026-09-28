@@ -8,7 +8,7 @@ const fields={projects:['title','category','lead','description','tags','image','
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=(d,status=200)=>new Response(JSON.stringify(d),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 function url(s){if(!s)return '';if(/^https:\/\/[a-z0-9.-]+(?::443)?(?:[/?#]|$)/i.test(s))return s;if(/^(?:assets|certificates|poems|case-studies)\/[a-zA-Z0-9_./%-]+$/.test(s)&&!s.includes('..'))return '/'+s;if(/^\/media\/[a-zA-Z0-9-]+$/.test(s))return s;return '';}
-const demoDefaults={project_606:'https://mediassist-chatbot-saptarshi.onrender.com/',project_707:'https://ai-hr-2.vercel.app/'};
+const demoDefaults={project_606:'https://mediassist-chatbot-saptarshi.onrender.com/',project_707:'https://ai-hr-2.vercel.app/',project_1111:'https://ai-hr-rho-ten.vercel.app/'};
 const demoUrl=r=>url(r.data.demo)||demoDefaults[r.id]||'';
 async function records(env){const q=await env.DB.prepare('SELECT * FROM content').all();const map=new Map(seed.map(r=>[r.id,{...r,data:{...r.data}}]));for(const r of q.results)map.set(r.id,{...r,hidden:!!r.hidden,data:JSON.parse(r.data)});return [...map.values()].sort((a,b)=>a.position-b.position||a.id.localeCompare(b.id));}
 const accessKeys=new Map();

@@ -161,7 +161,7 @@ filterButtons.forEach((btn) => {
 const githubProfile = 'Saptarshi-Mandal-1234';
 const githubExcludedRepositories = new Set(['saptarshi-mandal-1234']);
 // GitHub repository IDs survive renames; this repo already has a curated card.
-const githubCuratedRepositoryIds = new Set([1288206087, 1389704573, 1392070557]);
+const githubCuratedRepositoryIds = new Set([1288206087]);
 const githubSyncStatus = document.getElementById('githubSyncStatus');
 const githubCacheKey = `portfolio-github-repos-${githubProfile}`;
 const githubCacheTtl = 15 * 60 * 1000;
@@ -171,10 +171,19 @@ function repositoryTitle(name) {
   return name.replace(/^[-_]+/, '').replace(/[-_]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function githubCacheRead(storageName, key) {
+  try { return JSON.parse(window[storageName].getItem(key) || 'null'); } catch { return null; }
+}
+
+function githubCacheWrite(storageName, key, value) {
+  try { window[storageName].setItem(key, JSON.stringify(value)); } catch { /* Browsing still works without storage. */ }
+}
+
 function githubProjectCard(repo) {
   const card = document.createElement('article');
   card.className = 'card project-card github-project-card';
   card.id = `github-${repo.name.toLowerCase().replace(/[^a-z0-9_-]/g, '-')}`;
+  card.dataset.githubRepo = String(repo.id);
   card.dataset.category = 'github';
   card.dataset.reveal = '';
   const meta = document.createElement('div');
@@ -208,31 +217,166 @@ function githubProjectCard(repo) {
   return card;
 }
 
+function updateGithubProjectCard(card, repo) {
+  card.querySelector('h3').textContent = repositoryTitle(repo.name);
+  card.querySelector('.project-lead').textContent = repo.language ? `${repo.language} repository` : 'Public GitHub repository';
+  card.querySelector('p.muted').textContent = repo.description || 'A public repository. Open it on GitHub for source and setup details.';
+  const tags = card.querySelector('.tag-list');
+  tags.replaceChildren();
+  [repo.language, repo.license?.spdx_id && repo.license.spdx_id !== 'NOASSERTION' ? repo.license.spdx_id : null].filter(Boolean).forEach(value => {
+    const tag = document.createElement('span');
+    tag.className = 'tag';
+    tag.textContent = value;
+    tags.appendChild(tag);
+  });
+}
+
+function githubLiveLink(card, homepage) {
+  if (!homepage) return;
+  let links = card.querySelector('.project-links');
+  if (!links) {
+    links = document.createElement('div');
+    links.className = 'project-links';
+    card.appendChild(links);
+  }
+  let link = links.querySelector('[data-github-live]') || [...links.querySelectorAll('a')].find(item => /try live app/i.test(item.textContent));
+  if (!link) {
+    link = document.createElement('a');
+    link.textContent = 'Try live app ↗';
+    links.prepend(link);
+  }
+  link.dataset.githubLive = '';
+  link.href = homepage;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+}
+
+function githubGallery(card, repo, images) {
+  card.querySelector(`[data-github-gallery="${repo.id}"]`)?.remove();
+  if (!images.length) return;
+  const details = document.createElement('details');
+  details.className = 'github-gallery';
+  details.dataset.githubGallery = String(repo.id);
+  const summary = document.createElement('summary');
+  summary.textContent = `View ${images.length} repository ${images.length === 1 ? 'image' : 'images'}`;
+  const grid = document.createElement('div');
+  grid.className = 'github-gallery-grid';
+  images.forEach((item, index) => {
+    const link = document.createElement('a');
+    link.href = item.asset;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', `Open ${repo.name} image ${index + 1}`);
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.src = item.asset;
+    img.alt = `${repositoryTitle(repo.name)}: ${item.source.split('/').at(-1).replace(/[-_]/g, ' ')}`;
+    link.appendChild(img);
+    grid.appendChild(link);
+  });
+  details.append(summary, grid);
+  const links = card.querySelector('.project-links');
+  if (links) links.before(details);
+  else card.appendChild(details);
+  if (card.classList.contains('github-project-card') && !card.querySelector('.project-preview')) {
+    const preview = document.createElement('a');
+    preview.className = 'project-preview';
+    preview.href = images[0].asset;
+    preview.target = '_blank';
+    preview.rel = 'noopener noreferrer';
+    const img = document.createElement('img');
+    img.src = images[0].asset;
+    img.loading = 'lazy';
+    img.alt = `${repositoryTitle(repo.name)} project screenshot`;
+    preview.appendChild(img);
+    card.querySelector('.project-meta').after(preview);
+  }
+}
+
+async function githubRepoImages(repo, snapshot, helpers) {
+  if (snapshot?.pushedAt === repo.pushed_at) return snapshot.gallery;
+  const key = `portfolio-github-images-${repo.id}`;
+  const cached = githubCacheRead('localStorage', key);
+  if (cached?.pushedAt === repo.pushed_at) return cached.gallery;
+  const response = await fetch(`https://api.github.com/repos/${githubProfile}/${encodeURIComponent(repo.name)}/git/trees/${encodeURIComponent(repo.default_branch)}?recursive=1`, {
+    headers: { Accept: 'application/vnd.github+json' }, signal: AbortSignal.timeout(15000),
+  });
+  if (!response.ok) throw Error(`GitHub images returned ${response.status}`);
+  const tree = await response.json();
+  if (tree.truncated) throw Error('GitHub image tree was incomplete');
+  const gallery = helpers.selectProjectImages(tree.tree).map(file => ({
+    source: file.path, asset: helpers.githubRawImage(githubProfile, repo.name, repo.default_branch, file.path),
+  }));
+  githubCacheWrite('localStorage', key, { pushedAt: repo.pushed_at, gallery });
+  return gallery;
+}
+
 async function loadGitHubProjects() {
   const grid = document.querySelector('.project-grid');
   if (!grid || githubSyncing) return;
   githubSyncing = true;
   try {
-    const cached = JSON.parse(sessionStorage.getItem(githubCacheKey) || 'null');
+    const helpers = await import('./github-projects.mjs');
+    const cached = githubCacheRead('sessionStorage', githubCacheKey);
     let repositories = cached?.savedAt && Date.now() - cached.savedAt < githubCacheTtl ? cached.repositories : null;
     if (!repositories) {
-      const response = await fetch(`https://api.github.com/users/${githubProfile}/repos?sort=updated&per_page=100`, { headers: { Accept: 'application/vnd.github+json' } });
-      if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
-      repositories = await response.json();
-      sessionStorage.setItem(githubCacheKey, JSON.stringify({ savedAt: Date.now(), repositories }));
+      repositories = [];
+      for (let page = 1; page <= 10; page++) {
+        const response = await fetch(`https://api.github.com/users/${githubProfile}/repos?sort=updated&per_page=100&page=${page}`, {
+          headers: { Accept: 'application/vnd.github+json' }, signal: AbortSignal.timeout(15000),
+        });
+        if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+        const batch = await response.json();
+        repositories.push(...batch);
+        if (batch.length < 100) break;
+      }
+      githubCacheWrite('sessionStorage', githubCacheKey, { savedAt: Date.now(), repositories });
     }
+    repositories = repositories.filter(repo => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase()));
+    const manifestResponse = await fetch('/assets/projects/repo-screenshots/manifest.json').catch(() => null);
+    const manifest = manifestResponse?.ok ? await manifestResponse.json() : { repositories: [] };
+    const snapshotByName = new Map(manifest.repositories.map(item => [item.repo.toLowerCase(), item]));
     const githubSkillSnapshot = document.getElementById('githubSkillSnapshot');
-    const repositoryLanguages = [...new Set(repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase())).map((repo) => repo.language).filter(Boolean))].sort();
+    const repositoryLanguages = [...new Set(repositories.map((repo) => repo.language).filter(Boolean))].sort();
     if (githubSkillSnapshot) {
       githubSkillSnapshot.hidden = false;
-      githubSkillSnapshot.innerHTML = `<strong>Live GitHub technology snapshot</strong><span>${repositoryLanguages.length ? repositoryLanguages.join(' · ') : 'No primary languages reported yet.'}</span><a href="resume-live.html" target="_blank" rel="noopener">Generate live resume →</a>`;
+      const label = document.createElement('strong');
+      label.textContent = 'Live GitHub technology snapshot';
+      const value = document.createElement('span');
+      value.textContent = repositoryLanguages.length ? repositoryLanguages.join(' · ') : 'No primary languages reported yet.';
+      const resume = document.createElement('a');
+      resume.href = 'resume-live.html';
+      resume.target = '_blank';
+      resume.rel = 'noopener';
+      resume.textContent = 'Generate live resume →';
+      githubSkillSnapshot.replaceChildren(label, value, resume);
     }
-    const existingLinks = new Set([...grid.querySelectorAll('a[href*="github.com/"]')].map((existingLink) => existingLink.href.replace(/\/$/, '').toLowerCase()));
-    const additions = repositories.filter((repo) => !repo.private && !repo.archived && !repo.fork && !githubExcludedRepositories.has(repo.name.toLowerCase()) && !githubCuratedRepositoryIds.has(repo.id)).filter((repo) => !existingLinks.has(repo.html_url.replace(/\/$/, '').toLowerCase())).slice(0, 12);
-    additions.forEach((repo) => grid.appendChild(githubProjectCard(repo)));
+    const currentIds = new Set(repositories.map(repo => String(repo.id)));
+    grid.querySelectorAll('.github-project-card').forEach(card => { if (!currentIds.has(card.dataset.githubRepo)) card.remove(); });
+    const cards = repositories.map(repo => {
+      const githubUrl = repo.html_url.replace(/\/$/, '').toLowerCase();
+      let card = [...grid.querySelectorAll('.project-card')].find(item => [...item.querySelectorAll('a[href*="github.com/"]')].some(link => link.href.replace(/\/$/, '').toLowerCase() === githubUrl));
+      if (!card && !githubCuratedRepositoryIds.has(repo.id)) {
+        card = githubProjectCard(repo);
+        grid.appendChild(card);
+      }
+      if (card?.classList.contains('github-project-card')) updateGithubProjectCard(card, repo);
+      if (card) githubLiveLink(card, helpers.projectHomepage(repo.homepage));
+      return { repo, card };
+    }).filter(item => item.card);
+    let cursor = 0;
+    const failures = [];
+    await Promise.all(Array.from({ length: Math.min(3, cards.length) }, async () => {
+      while (cursor < cards.length) {
+        const { repo, card } = cards[cursor++];
+        const snapshot = snapshotByName.get(repo.name.toLowerCase());
+        try { githubGallery(card, repo, await githubRepoImages(repo, snapshot, helpers)); }
+        catch { if (snapshot?.gallery?.length) githubGallery(card, repo, snapshot.gallery); else failures.push(repo.name); }
+      }
+    }));
     const filterStatus = document.getElementById('filterStatus');
     if (filterStatus) filterStatus.textContent = `Showing all ${getProjectCards().length} projects`;
-    if (githubSyncStatus) githubSyncStatus.textContent = additions.length ? `GitHub sync added ${additions.length} public ${additions.length === 1 ? 'repository' : 'repositories'} to this view.` : 'GitHub check complete — no new eligible repositories to add.';
+    if (githubSyncStatus) githubSyncStatus.textContent = `GitHub checked ${repositories.length} public projects; ${grid.querySelectorAll('.github-project-card').length} added automatically.${failures.length ? ' Some image galleries could not refresh.' : ''}`;
   } catch {
     if (githubSyncStatus) githubSyncStatus.textContent = 'GitHub projects could not be refreshed right now. Your curated projects are still available.';
   } finally {
@@ -249,6 +393,7 @@ const projectData = window.cmsProjectData || {
  "project_909": {"category": "DATA ANALYTICS & AI", "title": "AI Procurement Cost-Savings Advisor", "lead": "Turn procurement data into evidence-backed action.", "desc": "A three-page Streamlit decision dashboard built from 2,000 purchase orders, 100 suppliers and 200 products. It connects executive KPIs with supplier-risk scoring, P25 benchmark renegotiation scenarios and vendor-consolidation analysis. The supplied data shows 61.7% of orders arrived late, with an average delay of 1.58 days. Negotiation briefs, a CFO memo and data Q&A can use OpenAI or work through rule-based fallbacks without an API key. Savings figures are modelled decision-support estimates, not guaranteed results.", "tags": ["Python", "Streamlit", "Pandas", "Plotly", "OpenAI API"], "link": "https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor", "linkLabel": "View repository"},
  "project_808": {"category": "DATA ENGINEERING & ML", "title": "MarketPulse AI Foundation", "lead": "Market research built to be reproducible.", "desc": "A Python research pipeline for NIFTY 50 and ten liquid Indian stocks, with session-aware data validation, 39 technical features, PostgreSQL storage, chronological model evaluation, risk/anomaly analysis and seven-page Power BI report generation. Project documentation reports that tested ML candidates did not outperform selected simple baselines.", "tags": ["Python", "PostgreSQL", "Power BI", "Scikit-learn"], "link": "https://github.com/Saptarshi-Mandal-1234/MarketPulse--Ai", "linkLabel": "View repository"},
   "project_707": {"category": "SOFTWARE & AI", "title": "AI HR 2", "lead": "People operations with evidence and human review.", "desc": "A Gemini-powered HR workspace with employee profiles, onboarding, performance reviews and aggregate analytics. The dashboard uses a clearly labeled fictional employee dataset; sensitive decisions require human approval and are recorded in an audit trail.", "tags": ["Node.js", "PostgreSQL", "Gemini API"], "link": "https://github.com/Saptarshi-Mandal-1234/Ai-HR-2", "linkLabel": "View repository"},
+  "project_1111": {"category": "SOFTWARE & AI", "title": "AI HR", "lead": "A focused HR copilot prototype.", "desc": "The original lightweight Vercel demo uses fictional employees for directory views, onboarding packs, review drafts and routine AI-assisted HR writing. High-impact employment decisions stay with a human reviewer; do not enter real employee data.", "tags": ["JavaScript", "Gemini API", "Vercel"], "link": "https://github.com/Saptarshi-Mandal-1234/Ai-HR", "linkLabel": "View repository"},
   "project_101": {
     "category": "DATA ANALYTICS",
     "title": "HR Employee Attrition Analysis",

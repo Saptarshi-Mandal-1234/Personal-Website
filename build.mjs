@@ -13,7 +13,7 @@ for(const record of seed.filter(item=>item.kind==='projects'&&item.data.html)){
 }
 if(seedChanged)fs.writeFileSync('server/seed.json',JSON.stringify(seed,null,2)+'\n');
 fs.mkdirSync('dist/client',{recursive:true});
-for(const item of ['styles.css','script.js','poetry.js','admin.js','admin.css','resume-live.html','resume-live.css','resume-live.js','repo-gallery.js','favicon.ico','robots.txt','sitemap.xml','assets','certificates','poems','Saptarshi_Mandal_DataAnalyst_Resume.pdf'])if(fs.existsSync(item))fs.cpSync(item,path.join('dist/client',item),{recursive:true});
+for(const item of ['styles.css','script.js','github-projects.mjs','poetry.js','admin.js','admin.css','resume-live.html','resume-live.css','resume-live.js','repo-gallery.js','favicon.ico','robots.txt','sitemap.xml','assets','certificates','poems','Saptarshi_Mandal_DataAnalyst_Resume.pdf'])if(fs.existsSync(item))fs.cpSync(item,path.join('dist/client',item),{recursive:true});
 await build({entryPoints:['frontend/carousels.tsx'],bundle:true,minify:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/client/carousels.js'});
 execFileSync(process.execPath,['node_modules/@tailwindcss/cli/dist/index.mjs','-i','frontend/carousel.css','-o','dist/client/carousels.css','--minify'],{stdio:'inherit'});
 const templates={home:fs.readFileSync('index.html','utf8'),poetry:fs.readFileSync('poetry.html','utf8'),admin:fs.readFileSync('admin.html','utf8'),cases:Object.fromEntries(fs.readdirSync('case-studies').filter(f=>f.endsWith('.html')).map(f=>['/case-studies/'+f,fs.readFileSync('case-studies/'+f,'utf8')]))};

@@ -1,9 +1,112 @@
 {
-  "updated": "2026-09-27T11:10:19.754Z",
+  "updated": "2026-09-28T10:45:13.146Z",
   "repositories": [
+    {
+      "repo": "Ai-HR-2",
+      "commit": "65e50e3139299d23a8cf9c4c2dee3f0bfd11d6bd",
+      "pushedAt": "2026-09-28T07:46:31Z",
+      "homepage": "https://ai-hr-2.vercel.app/",
+      "discovered": [
+        "docs/assets/product-home-mobile.png",
+        "docs/assets/product-home.png"
+      ],
+      "gallery": [
+        {
+          "source": "docs/assets/product-home-mobile.png",
+          "asset": "assets/projects/repo-screenshots/Ai-HR-2/product-home-mobile.png",
+          "sha": "cc3842bd3ddf756d543218d67a7c34fff99f3438"
+        },
+        {
+          "source": "docs/assets/product-home.png",
+          "asset": "assets/projects/repo-screenshots/Ai-HR-2/product-home.png",
+          "sha": "27273436cba8ede83244a5b0c7d5aba0eb54e160"
+        }
+      ]
+    },
+    {
+      "repo": "MediAssist-Chatbot",
+      "commit": "e515093f8d646ecb1bfd10596f6d7e9a52d6f7b8",
+      "pushedAt": "2026-09-27T08:09:08Z",
+      "homepage": null,
+      "discovered": [],
+      "gallery": []
+    },
+    {
+      "repo": "Ai-HR",
+      "commit": "1375faecc0c983512736b5246bb06b9d861c1c0a",
+      "pushedAt": "2026-09-26T19:52:11Z",
+      "homepage": "https://ai-hr-rho-ten.vercel.app/",
+      "discovered": [],
+      "gallery": []
+    },
+    {
+      "repo": "MarketPulse--Ai",
+      "commit": "2c68bdf1621e1759ae1cda1e4cc406b578039f5b",
+      "pushedAt": "2026-09-26T19:42:53Z",
+      "homepage": null,
+      "discovered": [],
+      "gallery": []
+    },
+    {
+      "repo": "HR-attrition-analysis",
+      "commit": "33f4a3894767a76986125524d3957108e091a1d5",
+      "pushedAt": "2026-09-25T22:48:25Z",
+      "homepage": null,
+      "discovered": [
+        "dashboard/Screenshot 2026-07-03 170530.png",
+        "dashboard/Screenshot 2026-07-03 170638.png",
+        "dashboard/Screenshot 2026-07-03 170723.png",
+        "dashboard/Screenshot 2026-07-03 170810.png",
+        "dashboard/Screenshot 2026-07-03 170846.png",
+        "dashboard/Screenshot 2026-07-03 170934.png",
+        "dashboard/Screenshot 2026-07-03 171010.png",
+        "outputs/01_overall_attrition.png",
+        "outputs/02_attrition_by_overtime.png",
+        "outputs/03_attrition_by_jobrole.png",
+        "outputs/04_attrition_by_marital_status.png",
+        "outputs/05_attrition_by_income_quartile.png",
+        "outputs/06_attrition_by_business_travel.png",
+        "outputs/07_age_distribution.png",
+        "outputs/08_top_attrition_drivers.png",
+        "survival/09_survival_curve_overall.png",
+        "survival/10_survival_by_overtime.png",
+        "survival/11_survival_by_joblevel.png",
+        "survival/12_cox_hazard_ratios.png",
+        "survival/13_persona_summary_card.png"
+      ],
+      "gallery": [
+        {
+          "source": "dashboard/Screenshot 2026-07-03 170530.png",
+          "asset": "assets/projects/repo-screenshots/HR-attrition-analysis/Screenshot 2026-07-03 170530.png",
+          "sha": "7ae0db14bb331bf0b38c2eb91d71511043044bbd"
+        },
+        {
+          "source": "dashboard/Screenshot 2026-07-03 170638.png",
+          "asset": "assets/projects/repo-screenshots/HR-attrition-analysis/Screenshot 2026-07-03 170638.png",
+          "sha": "48ed46364f62408a6001c0023fc0cf604e4a3b61"
+        },
+        {
+          "source": "dashboard/Screenshot 2026-07-03 170723.png",
+          "asset": "assets/projects/repo-screenshots/HR-attrition-analysis/Screenshot 2026-07-03 170723.png",
+          "sha": "b16b83d36310d4e396000f0b12c024222b5520c0"
+        },
+        {
+          "source": "dashboard/Screenshot 2026-07-03 170810.png",
+          "asset": "assets/projects/repo-screenshots/HR-attrition-analysis/Screenshot 2026-07-03 170810.png",
+          "sha": "11159c3d56d64ca7688a913176e98adcd7e966be"
+        },
+        {
+          "source": "dashboard/Screenshot 2026-07-03 170846.png",
+          "asset": "assets/projects/repo-screenshots/HR-attrition-analysis/Screenshot 2026-07-03 170846.png",
+          "sha": "1d2430e0040d37dadfbbf770343b2be6b854a61f"
+        }
+      ]
+    },
     {
       "repo": "WIPRO_COE_CLASS",
       "commit": "c4e0f27ab1712ea939486ef911d94bb5fb274146",
+      "pushedAt": "2026-09-26T12:07:16Z",
+      "homepage": "https://saptarshi-mandal-1234.github.io/WIPRO_COE_CLASS/",
       "discovered": [
         "capstone_project/screenshots/01_home_20260923_172817.png",
         "capstone_project/screenshots/04_added_to_cart_20260923_172912.png",
@@ -40,8 +143,71 @@
       ]
     },
     {
+      "repo": "Customer-Churn-Analysis",
+      "commit": "2acfe5f2d9945fbf26ea961af401cc1f7a98b4ef",
+      "pushedAt": "2026-09-25T22:44:09Z",
+      "homepage": null,
+      "discovered": [],
+      "gallery": []
+    },
+    {
+      "repo": "Loan-Default-Credit-Risk-Analysis-",
+      "commit": "05abcf90d021dc723b8f9f6362f0e7b25d7281b8",
+      "pushedAt": "2026-09-25T22:36:14Z",
+      "homepage": null,
+      "discovered": [
+        "dashboard/Screenshot 2026-09-26 035712.png",
+        "dashboard/Screenshot 2026-09-26 040040.png",
+        "reports/figures/01_loan_amount_distribution.png",
+        "reports/figures/02_income_distribution.png",
+        "reports/figures/03_age_employment_distribution.png",
+        "reports/figures/04_credit_history_purpose.png",
+        "reports/figures/05_default_rate_by_income.png",
+        "reports/figures/06_loan_amount_vs_default.png",
+        "reports/figures/07_default_by_ownership_grade.png",
+        "reports/figures/08_default_by_purpose_cbflag.png",
+        "reports/figures/09_correlation_heatmap.png",
+        "reports/figures/10_loanpct_by_grade_default.png",
+        "reports/figures/11_confusion_matrix.png",
+        "reports/figures/12_shap_summary.png",
+        "reports/figures/13_shap_importance_bar.png",
+        "reports/figures/14_threshold_optimization.png",
+        "reports/figures/15_risk_heatmap_grade_income.png",
+        "reports/figures/16_risk_heatmap_ownership_purpose.png"
+      ],
+      "gallery": [
+        {
+          "source": "dashboard/Screenshot 2026-09-26 035712.png",
+          "asset": "assets/projects/repo-screenshots/Loan-Default-Credit-Risk-Analysis-/Screenshot 2026-09-26 035712.png",
+          "sha": "afdbadc33e043b5c36c87aa6e72b0ff73a6d0b55"
+        },
+        {
+          "source": "dashboard/Screenshot 2026-09-26 040040.png",
+          "asset": "assets/projects/repo-screenshots/Loan-Default-Credit-Risk-Analysis-/Screenshot 2026-09-26 040040.png",
+          "sha": "0dcfb91bf72c9337dfaa2e1034f02c8cf3d808a8"
+        },
+        {
+          "source": "reports/figures/01_loan_amount_distribution.png",
+          "asset": "assets/projects/repo-screenshots/Loan-Default-Credit-Risk-Analysis-/01_loan_amount_distribution.png",
+          "sha": "1593c6e6419d73f40687f16c68edbe9c6af7c541"
+        },
+        {
+          "source": "reports/figures/02_income_distribution.png",
+          "asset": "assets/projects/repo-screenshots/Loan-Default-Credit-Risk-Analysis-/02_income_distribution.png",
+          "sha": "3ab570c7bf74ace3cd820be7176b5b15be24d215"
+        },
+        {
+          "source": "reports/figures/03_age_employment_distribution.png",
+          "asset": "assets/projects/repo-screenshots/Loan-Default-Credit-Risk-Analysis-/03_age_employment_distribution.png",
+          "sha": "a92c56049a124074ec0f50746bc081856eb81ebf"
+        }
+      ]
+    },
+    {
       "repo": "WIPRO-Selenium-ecommerce-automation-capstone-project",
       "commit": "5a9342fc081c031e3c6a45fd740bf026b947fbe3",
+      "pushedAt": "2026-09-25T17:11:15Z",
+      "homepage": null,
       "discovered": [
         "screenshots/01_home_20260922_155935.png",
         "screenshots/01_home_20260922_160711.png",
@@ -79,6 +245,42 @@
           "source": "screenshots/06_cart_verified_20260922_160804.png",
           "asset": "assets/projects/repo-screenshots/WIPRO-Selenium-ecommerce-automation-capstone-project/06_cart_verified_20260922_160804.png",
           "sha": "85c3b964b749f5a2a6adaf7a32f11c582da16ee2"
+        }
+      ]
+    },
+    {
+      "repo": "Automated-Irrigation-System",
+      "commit": "d3cc57e5c03db7365935a85b1f0bfc0fe9858d4c",
+      "pushedAt": "2026-09-23T19:13:56Z",
+      "homepage": null,
+      "discovered": [],
+      "gallery": []
+    },
+    {
+      "repo": "ai-procurement-cost-savings-advisor",
+      "commit": "105faae9a4457207643eeec311667665f31326d5",
+      "pushedAt": "2026-09-23T10:27:25Z",
+      "homepage": null,
+      "discovered": [
+        "Screenshots/01_executive_overview.png",
+        "Screenshots/02_vendor_spend_analysis.png",
+        "Screenshots/03_risk_savings_ai_advisor.png"
+      ],
+      "gallery": [
+        {
+          "source": "Screenshots/01_executive_overview.png",
+          "asset": "assets/projects/repo-screenshots/ai-procurement-cost-savings-advisor/01_executive_overview.png",
+          "sha": "da53ec12e7db73606816394a156c3a6c021c7a91"
+        },
+        {
+          "source": "Screenshots/02_vendor_spend_analysis.png",
+          "asset": "assets/projects/repo-screenshots/ai-procurement-cost-savings-advisor/02_vendor_spend_analysis.png",
+          "sha": "1af339e72797a13f07e594f3793867a1d62161d7"
+        },
+        {
+          "source": "Screenshots/03_risk_savings_ai_advisor.png",
+          "asset": "assets/projects/repo-screenshots/ai-procurement-cost-savings-advisor/03_risk_savings_ai_advisor.png",
+          "sha": "9c339d90e84f4ce50341378269751ffb933969c9"
         }
       ]
     }

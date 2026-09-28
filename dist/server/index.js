@@ -134,6 +134,23 @@ var seed_default = [
   },
   {
     kind: "projects",
+    id: "project_1111",
+    data: {
+      title: "AI HR",
+      category: "software-iot",
+      lead: "A focused HR copilot prototype.",
+      description: "The original lightweight demo brings together fictional employee profiles, onboarding packs, review drafts and routine HR assistance with human-review boundaries.",
+      tags: "JavaScript, Gemini API, Vercel",
+      image: "assets/projects/ai-hr-workspace.png",
+      link: "https://github.com/Saptarshi-Mandal-1234/Ai-HR",
+      caseText: "The original AI HR demo provides a fictional employee directory and profiles, onboarding-pack generation, review drafts and routine HR writing assistance. Gemini requests run server-side. This public demo is not a production HR system: do not enter real employee data, and keep high-impact employment decisions under human review. AI HR 2 is the expanded successor project."
+    },
+    position: 6.5,
+    hidden: false,
+    revision: 0
+  },
+  {
+    kind: "projects",
     id: "project_808",
     data: {
       title: "MarketPulse AI Foundation",
@@ -1916,6 +1933,14 @@ var templates_default = { home: `<!DOCTYPE html>\r
           <div class="tag-list"><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Gemini API</span></div>\r
           <div class="card-actions"><a class="btn-details" href="case-studies/ai-hr.html">Explore project \u2192</a><button type="button" class="btn-details" data-project="project_707" aria-haspopup="dialog">Quick details \u2192</button></div>
           <div class="project-links"><a href="https://ai-hr-2.vercel.app/" target="_blank" rel="noopener noreferrer">Try live app \u2197</a><a href="https://github.com/Saptarshi-Mandal-1234/Ai-HR-2" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">\u2197</span></a></div></article>\r
+        <article class="card project-card" id="project_1111" data-category="software-iot" data-reveal>\r
+          <a class="project-preview" href="project/project_1111"><img loading="lazy" src="assets/projects/ai-hr-workspace.png" alt="Original AI HR demo workspace interface"></a>\r
+          <div class="project-meta"><span>SOFTWARE &amp; AI</span><span>ORIGINAL DEMO /</span></div>\r
+          <h3>AI HR</h3><p class="project-lead">A focused HR copilot prototype.</p><p class="muted">The original lightweight demo brings together fictional employee profiles, onboarding packs, review drafts and routine HR assistance with human-review boundaries.</p>\r
+          <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">Gemini API</span><span class="tag">Vercel</span></div>\r
+          <div class="card-actions"><a class="btn-details" href="project/project_1111">Project overview \u2192</a><button type="button" class="btn-details" data-project="project_1111" aria-haspopup="dialog">Quick details \u2192</button></div>\r
+          <div class="project-links"><a href="https://ai-hr-rho-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Try live app \u2197</a><a href="https://github.com/Saptarshi-Mandal-1234/Ai-HR" target="_blank" rel="noopener noreferrer">View repository \u2197</a></div>\r
+        </article>\r
 <article class="card project-card" id="project_808" data-category="data-ml" data-reveal><a class="project-preview" href="case-studies/marketpulse-ai.html"><img loading="lazy" src="assets/projects/marketpulse-stock-explorer.png" alt="MarketPulse Stock Explorer showing adjusted price history and observed trading volume"></a><div class="project-meta"><span>DATA ENGINEERING &amp; ML</span><span>08 /</span></div><h3>MarketPulse AI Foundation</h3><p class="project-lead">Market research built to be reproducible.</p><p class="muted">An Indian-equity research pipeline connecting daily price data, exchange-session validation, technical features, PostgreSQL analytics and Power BI reporting. Evaluates forecasts against simple baselines.</p><dl class="project-highlights"><div><dt>technical features</dt><dd>39</dd></div><div><dt>report pages</dt><dd>7</dd></div></dl><div class="tag-list"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Power BI</span><span class="tag">Scikit-learn</span></div><div class="card-actions"><a class="btn-details" href="case-studies/marketpulse-ai.html">Explore project \u2192</a><button type="button" class="btn-details" data-project="project_808" aria-haspopup="dialog">Quick details \u2192</button></div><div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/MarketPulse--Ai" target="_blank" rel="noopener noreferrer">View repository \u2197</a></div></article>
 <article class="card project-card" id="project_909" data-category="data-ml" data-reveal><a class="project-preview" href="case-studies/procurement-advisor.html"><img loading="lazy" src="assets/projects/procurement-overview.png" alt="Actual AI Procurement Cost-Savings Advisor executive dashboard screenshot"></a><div class="project-meta"><span>DATA ANALYTICS &amp; AI</span><span>09 /</span></div><h3>AI Procurement Cost-Savings Advisor</h3><p class="project-lead">Turn procurement data into evidence-backed action.</p><p class="muted">A three-page Streamlit dashboard that connects purchase orders, supplier records and product benchmarks to reveal delivery risk, cost variance and savings scenarios. Built-in negotiation briefs and CFO-ready summaries work with optional AI or reliable rule-based fallbacks.</p><dl class="project-highlights"><div><dt>orders analysed</dt><dd>2,000</dd></div><div><dt>suppliers profiled</dt><dd>100</dd></div></dl><div class="tag-list"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span><span class="tag">Plotly</span></div><div class="card-actions"><button type="button" class="btn-details" data-project="project_909" aria-haspopup="dialog">Explore project <span aria-hidden="true">\u2192</span></button></div><div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/ai-procurement-cost-savings-advisor" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">\u2197</span></a></div></article>
 <article class="card project-card" id="project_1010" data-category="software-iot" data-reveal><a class="project-preview" href="case-studies/selenium-ecommerce.html"><img loading="lazy" src="assets/projects/repo-screenshots/WIPRO_COE_CLASS/search_results_20260923_173739.png" alt="Selenium capstone search results screenshot from Wipro COE repository"></a><div class="project-meta"><span>QA AUTOMATION</span><span>10 /</span></div><h3>Selenium E-Commerce Automation</h3><p class="project-lead">A purchase flow tested with evidence at every step.</p><p class="muted">A Python and Selenium automation script for a public e-commerce test site. It loads test data from JSON, uses explicit waits, handles popups, verifies the cart and generates a linked HTML execution report with real screenshots.</p><dl class="project-highlights"><div><dt>verified checks</dt><dd>6 pass</dd></div><div><dt>latest run</dt><dd>65.8s</dd></div></dl><div class="tag-list"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">ChromeDriver</span><span class="tag">JSON</span></div><div class="card-actions"><a class="btn-details" href="case-studies/selenium-ecommerce.html">View test evidence \u2192</a><button type="button" class="btn-details" data-project="project_1010" aria-haspopup="dialog">Quick details \u2192</button></div><div class="project-links"><a href="https://github.com/Saptarshi-Mandal-1234/WIPRO-Selenium-ecommerce-automation-capstone-project" target="_blank" rel="noopener noreferrer">View capstone repo <span aria-hidden="true">\u2197</span></a><a href="https://github.com/Saptarshi-Mandal-1234/WIPRO_COE_CLASS" target="_blank" rel="noopener noreferrer">Wipro COE repo \u2197</a></div></article>
@@ -3051,7 +3076,7 @@ function url(s) {
   if (/^\/media\/[a-zA-Z0-9-]+$/.test(s)) return s;
   return "";
 }
-var demoDefaults = { project_606: "https://mediassist-chatbot-saptarshi.onrender.com/", project_707: "https://ai-hr-2.vercel.app/" };
+var demoDefaults = { project_606: "https://mediassist-chatbot-saptarshi.onrender.com/", project_707: "https://ai-hr-2.vercel.app/", project_1111: "https://ai-hr-rho-ten.vercel.app/" };
 var demoUrl = (r) => url(r.data.demo) || demoDefaults[r.id] || "";
 async function records(env) {
   const q = await env.DB.prepare("SELECT * FROM content").all();
