@@ -656,5 +656,49 @@
     "kind": "Team achievement",
     "file": "certificates/atl-07.png",
     "original": "ATL/Team_X_B_ATL_Marathon_2020___Top_300_Teams_certificate-1.png"
+  },
+  {
+    "id": 39,
+    "title": "Introduction to Selenium",
+    "issuer": "Coursera · Starweaver",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-39.pdf",
+    "original": "Coursera - Introduction to Selenium.pdf",
+    "verification": "https://coursera.org/verify/L99T7FWZKBQF",
+    "group": "tech"
+  },
+  {
+    "id": 40,
+    "title": "Python for Automation",
+    "issuer": "Madecraft · Coursera",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-40.pdf",
+    "original": "Coursera - Python for automation - Madecraft.pdf",
+    "verification": "https://coursera.org/verify/65UMFG2C0DIR",
+    "group": "tech"
+  },
+  {
+    "id": 41,
+    "title": "Selenium WebDriver with Python",
+    "issuer": "Whizlabs · Coursera",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-41.pdf",
+    "original": "Coursera - Selenium WebDriver with Python - WHIZLABS.pdf",
+    "verification": "https://coursera.org/verify/3CXHKE1B0AMN",
+    "group": "tech"
+  },
+  {
+    "id": 42,
+    "title": "Test Automation with Playwright (Python) & Robot Framework",
+    "issuer": "Coursera",
+    "category": "systems",
+    "kind": "Course completion",
+    "file": "certificates/certificate-42.pdf",
+    "original": "Coursera - Test Automation with Playwright (Python) & Robot Framework.pdf",
+    "verification": "https://coursera.org/verify/1HTC4NA0TUZT",
+    "group": "tech"
   }
 ]
