@@ -11,9 +11,11 @@ The portfolio is a Cloudflare Worker. The frontend is bundled under `dist/client
 ## Deploy on your Cloudflare account
 
 1. Run `npm ci` and `npm run build`.
-2. Copy `wrangler.production.example.jsonc` to `wrangler.production.jsonc`, replace the D1 database ID and R2 bucket name, and use `npx wrangler deploy --config wrangler.production.jsonc`. Keep the configured binding names `DB` and `BUCKET`.
-3. Add a Cloudflare Access application for the `/admin*` and `/api/admin/*` paths on the production hostname, with an allow policy for the owner's email. Set Worker environment variables `TEAM_DOMAIN` (for example, `https://example.cloudflareaccess.com`) and `POLICY_AUD` (the Access application audience). The backend verifies the Access JWT signature, issuer, audience, expiration, email, and pinned user ID. Never expose the admin paths without Access configured.
+2. The tracked `wrangler.production.jsonc` points to the dedicated Cloudflare D1 database and the `saptarshi-portfolio-media` R2 bucket. After that bucket exists, use `npx wrangler deploy --config wrangler.production.jsonc`. Keep the configured binding names `DB` and `BUCKET`.
+3. The Cloudflare Access application protects `/admin*` and `/api/admin/*` on the production Workers hostname and allows only the owner's email. The tracked config sets `TEAM_DOMAIN` and `POLICY_AUD` for its JWT verification. The backend verifies the Access JWT signature, issuer, audience, expiration, email, and pinned user ID. If the hostname or Access application changes, update both the Access destinations and these config values before deploying.
 4. Check `/`, `/poetry.html`, `/resume-live.html`, all case-study routes, `/admin`, a certificate PDF, and a project image while signed out. Then sign in as the owner and test one D1 save and one R2 upload. Run `PORTFOLIO_BASE_URL=https://your-worker.example.workers.dev node scripts/smoke.mjs` for public-route checks. On PowerShell, set `$env:PORTFOLIO_BASE_URL` before running the script.
+
+For automatic deployments, connect the `Personal-Website` GitHub repository to this Worker in Cloudflare Workers & Pages → the Worker → Settings → Builds. Use `main` as the branch, `npm ci && npm run build` as the build command, and `npx wrangler deploy --config wrangler.production.jsonc` as the deploy command. Keep the Access application and the config's hostname and audience aligned.
 
 GitHub live projects and the live resume use GitHub's public API; the site never reads `D:\NEW PROJECT` or another visitor's local disk. Moving hosts does not copy files from your computer. Keep the local project images and certificate files in the source before each build, or upload new media through the admin after deploying.
 

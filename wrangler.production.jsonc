@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "saptarshi-portfolio",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-09-28",
+  "vars": {
+    "TEAM_DOMAIN": "https://saptarshi-portfolio.cloudflareaccess.com",
+    "POLICY_AUD": "92877e355274d5c2eee2951f13a91c80e5f6fb34943da867c3f4bcf6eea5c023"
+  },
+  "assets": { "directory": "dist/client", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [{ "binding": "DB", "database_name": "saptarshi-portfolio", "database_id": "17ff5d6e-5741-47e3-83bf-85f7ce8dc537" }],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "saptarshi-portfolio-media" }]
+}

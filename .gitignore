@@ -2,4 +2,3 @@ node_modules/
 .wrangler/
 .sites-runtime/
 .env
-wrangler.production.jsonc
