@@ -22,8 +22,16 @@ await checkInBatches(checked, async path => {
   const response = await request(new URL(path, base), { method: 'HEAD' });
   if (!response.ok) throw Error(`Broken internal link: ${path} (${response.status})`);
 });
-const admin = await request(new URL('/api/admin/content', base));
-if (admin.status !== 403) throw Error(`Admin access should require authentication: ${admin.status}`);
+for (const path of ['/admin', '/api/admin/content']) {
+  const admin = await request(new URL(path, base), { redirect: 'manual' });
+  const accessLogin = admin.status === 302 && (() => {
+    const location = admin.headers.get('location');
+    if (!location) return false;
+    const url = new URL(location);
+    return url.protocol === 'https:' && url.hostname.endsWith('.cloudflareaccess.com') && url.pathname.startsWith('/cdn-cgi/access/login/');
+  })();
+  if (admin.status !== 403 && !accessLogin) throw Error(`${path} should require authentication: ${admin.status}`);
+}
 await checkInBatches(['/favicon.ico', '/robots.txt', '/sitemap.xml'], async path => {
   const response = await request(new URL(path, base), { method: 'HEAD' });
   if (!response.ok) throw Error(`Hosting asset missing: ${path} (${response.status})`);

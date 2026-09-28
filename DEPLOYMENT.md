@@ -1,5 +1,7 @@
 # Independent hosting
 
+Production URL: `https://saptarshi-portfolio.saptarshi-mandal-portfolio.workers.dev`. Cloudflare builds from the `main` branch of `Saptarshi-Mandal-1234/Personal-Website` and deploys the Worker with its D1 database, R2 media bucket, and owner-only Access policy.
+
 The portfolio is a Cloudflare Worker. The frontend is bundled under `dist/client`, the backend is `dist/server/index.js`, editable content is stored in D1, and CMS uploads are stored in R2. Seed content, certificate files, project images, and poems already in the repository ship with the build. The current Sites project uses the same D1/R2 binding names, but its account resources cannot be assumed to exist in a separate Cloudflare account.
 
 ## Before moving
