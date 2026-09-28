@@ -1,5 +1,7 @@
 # Saptarshi Mandal — Personal Website
 
+**Live website:** [saptarshi-portfolio.saptarshi-mandal-portfolio.workers.dev](https://saptarshi-portfolio.saptarshi-mandal-portfolio.workers.dev/)
+
 Portfolio with project case studies, live GitHub project discovery, certificates, poetry, photography, and a live resume. The public site is a Cloudflare Worker; bundled content lives in `server/seed.json`, admin edits in D1, and admin uploads in R2.
 
 ## Run locally
@@ -33,4 +35,4 @@ The smoke test checks pages, internal links, media, and unauthenticated admin pr
 - `assets/`, `certificates/`, `poems/`, `case-studies/`: published media and case studies.
 - `scripts/sync-repo-screenshots.mjs`: optional local snapshot of images from public GitHub repositories. Review the images before committing them.
 
-The browser discovers new public GitHub repositories and their images, but a GitHub push does not automatically redeploy this portfolio. For independent hosting, follow [DEPLOYMENT.md](DEPLOYMENT.md) to create your own D1 database, R2 bucket, Cloudflare Access policy, and Worker deployment. Export live D1/R2 content before moving hosts; source control alone does not back up admin edits or uploads.
+The browser discovers new public GitHub repositories and their images. Cloudflare automatically redeploys this portfolio when `main` changes. See [DEPLOYMENT.md](DEPLOYMENT.md) for the D1, R2, Access, and Worker configuration. Source control alone does not back up admin edits or uploads.
